@@ -1,0 +1,28 @@
+{
+  "schemaVersion":1,
+  "id":"mechanicaltech",
+  "version":"${version}",
+  "name":"Mechanical Tech",
+  "description":"",
+  "authors":[],
+  "contact":{},
+  "license":"MIT",
+  "icon":"assets/mechanicaltech/icon.png",
+  "environment":"*",
+  "entrypoints":{
+    "client":[
+      "io.engi.mechanicaltech.client.MechanicalTechClient"
+    ],
+    "main":[
+      "io.engi.mechanicaltech.MechanicalTech"
+    ]
+  },
+  "mixins":[
+    "mechanicaltech.mixins.json"
+  ],
+  "depends":{
+    "fabricloader":">=0.10.8",
+    "fabric":"*",
+    "minecraft":"1.16.4"
+  }
+}

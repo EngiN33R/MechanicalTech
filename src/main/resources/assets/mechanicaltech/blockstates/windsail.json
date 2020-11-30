@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "mechanicaltech:block/windsail" },
+    "facing=south": { "model": "mechanicaltech:block/windsail", "y": 180 },
+    "facing=west": { "model": "mechanicaltech:block/windsail", "y": 270 },
+    "facing=east": { "model": "mechanicaltech:block/windsail", "y": 90 }
+  }
+}

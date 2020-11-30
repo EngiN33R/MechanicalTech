@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=z": { "model": "mechanicaltech:block/spindle_horizontal" },
+    "axis=x": { "model": "mechanicaltech:block/spindle_horizontal", "y": 90 },
+    "axis=y": { "model": "mechanicaltech:block/spindle_vertical" }
+  }
+}

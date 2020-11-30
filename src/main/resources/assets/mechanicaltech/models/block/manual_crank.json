@@ -1,0 +1,77 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "minecraft:block/oak_planks",
+		"particle": "minecraft:block/oak_planks"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [9, 8, 9],
+			"faces": {
+				"north": {"uv": [0, 8, 2, 16], "texture": "#0"},
+				"east": {"uv": [2, 8, 4, 16], "texture": "#0"},
+				"south": {"uv": [0, 8, 2, 16], "texture": "#0"},
+				"west": {"uv": [2, 8, 4, 16], "texture": "#0"},
+				"up": {"uv": [2, 8, 4, 10], "texture": "#0"},
+				"down": {"uv": [0, 8, 2, 10], "texture": "#0"}
+			}
+		},
+		{
+			"from": [2, 8, 7],
+			"to": [4, 11, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 16, 8]},
+			"faces": {
+				"north": {"uv": [0, 8, 2, 16], "texture": "#0"},
+				"east": {"uv": [2, 8, 4, 16], "texture": "#0"},
+				"south": {"uv": [0, 8, 2, 16], "texture": "#0"},
+				"west": {"uv": [2, 8, 4, 16], "texture": "#0"},
+				"up": {"uv": [2, 8, 4, 10], "texture": "#0"},
+				"down": {"uv": [0, 8, 2, 10], "texture": "#0"}
+			}
+		},
+		{
+			"from": [2, 6, 7],
+			"to": [7, 8, 9],
+			"rotation": {"angle": 0, "axis": "z", "origin": [-1, 7, 8]},
+			"faces": {
+				"north": {"uv": [0, 8, 2, 16], "rotation": 90, "texture": "#0"},
+				"east": {"uv": [0, 8, 2, 10], "rotation": 270, "texture": "#0"},
+				"south": {"uv": [0, 8, 2, 16], "rotation": 270, "texture": "#0"},
+				"west": {"uv": [2, 8, 4, 10], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [2, 8, 4, 16], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [2, 8, 4, 16], "rotation": 270, "texture": "#0"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 7, 0]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 7, 0]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -45, 0],
+			"translation": [0, 6, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 17, 0],
+			"translation": [0, 6, 0]
+		},
+		"ground": {
+			"translation": [0, 4, 0]
+		},
+		"gui": {
+			"rotation": [21, -43, 0],
+			"translation": [2, 2, 0]
+		},
+		"head": {
+			"translation": [0, 14, 0]
+		},
+		"fixed": {
+			"translation": [0, 4.25, 0]
+		}
+	}
+}

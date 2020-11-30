@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=down": { "model": "mechanicaltech:block/manual_crank" },
+    "facing=up": { "model": "mechanicaltech:block/manual_crank", "x": 180 },
+    "facing=east": { "model": "mechanicaltech:block/manual_crank", "z": 90 },
+    "facing=west": { "model": "mechanicaltech:block/manual_crank", "z": 270 },
+    "facing=north": { "model": "mechanicaltech:block/manual_crank", "x": 90 },
+    "facing=south": { "model": "mechanicaltech:block/manual_crank", "x": 270 }
+  }
+}

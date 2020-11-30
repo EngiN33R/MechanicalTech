@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " I ",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "mechanicaltech:wood_gear"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:spindle"
+  }
+}

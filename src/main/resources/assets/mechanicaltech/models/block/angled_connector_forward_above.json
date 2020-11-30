@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"texture_size": [48, 16],
+  "textures": {
+    "block": "mechanicaltech:block/angled_connector",
+    "particle": "mechanicaltech:block/angled_connector"
+  },
+	"elements": [
+		{
+			"name": "up",
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [5.33333, 0, 10.66667, 16], "texture": "#block"},
+				"east": {"uv": [10.66667, 0, 16, 16], "texture": "#block"},
+				"south": {"uv": [10.66667, 0, 16, 16], "texture": "#block"},
+				"west": {"uv": [10.66667, 0, 16, 16], "texture": "#block"},
+				"up": {"uv": [0, 0, 5.33333, 16], "texture": "#block"},
+				"down": {"uv": [10.66667, 0, 16, 16], "texture": "#block"}
+			}
+		}
+	]
+}

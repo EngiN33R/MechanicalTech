@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "G G",
+    "C C",
+    "CCC"
+  ],
+  "key": {
+    "G": {
+      "item": "mechanicaltech:wood_gear"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:mill"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  I",
+    " II",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:manual_crank"
+  }
+}

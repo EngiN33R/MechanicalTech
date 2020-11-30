@@ -1,0 +1,36 @@
+{
+  "block.mechanicaltech.turbine": "Turbine",
+  "block.mechanicaltech.waterwheel": "Waterwheel",
+  "block.mechanicaltech.windsail": "Windsail",
+  "block.mechanicaltech.manual_crank": "Manual Crank",
+
+  "block.mechanicaltech.mill": "Mill",
+
+  "block.mechanicaltech.angled_connector_down": "Angled Connector (Forward-Down)",
+  "block.mechanicaltech.angled_connector_forward_above": "Angled Connector (Up-Forward)",
+  "block.mechanicaltech.angled_connector_forward_below": "Angled Connector (Down-Forward)",
+  "block.mechanicaltech.angled_connector_left": "Angled Connector (Forward-Left)",
+  "block.mechanicaltech.angled_connector_right": "Angled Connector (Forward-Right)",
+  "block.mechanicaltech.angled_connector_up": "Angled Connector (Forward-Top)",
+  "block.mechanicaltech.cross_connector": "Cross Connector",
+  "block.mechanicaltech.spindle": "Spindle",
+
+  "item.mechanicaltech.turbine": "Turbine",
+  "item.mechanicaltech.waterwheel": "Waterwheel",
+  "item.mechanicaltech.windsail": "Windsail",
+  "item.mechanicaltech.manual_crank": "Manual Crank",
+
+  "item.mechanicaltech.mill": "Mill",
+
+  "item.mechanicaltech.angled_connector_down": "Angled Connector (Forward-Down)",
+  "item.mechanicaltech.angled_connector_forward_above": "Angled Connector (Up-Forward)",
+  "item.mechanicaltech.angled_connector_forward_below": "Angled Connector (Down-Forward)",
+  "item.mechanicaltech.angled_connector_left": "Angled Connector (Forward-Left)",
+  "item.mechanicaltech.angled_connector_right": "Angled Connector (Forward-Right)",
+  "item.mechanicaltech.angled_connector_up": "Angled Connector (Forward-Top)",
+  "item.mechanicaltech.cross_connector": "Cross Connector",
+  "item.mechanicaltech.spindle": "Spindle",
+
+  "item.mechanicaltech.wood_gear": "Wooden Gear",
+  "item.mechanicaltech.flour": "Flour"
+}

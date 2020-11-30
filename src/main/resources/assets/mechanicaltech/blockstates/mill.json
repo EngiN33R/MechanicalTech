@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "mechanicaltech:block/mill" },
+    "facing=south": { "model": "mechanicaltech:block/mill", "y": 180 },
+    "facing=west": { "model": "mechanicaltech:block/mill", "y": 270 },
+    "facing=east": { "model": "mechanicaltech:block/mill", "y": 90 }
+  }
+}

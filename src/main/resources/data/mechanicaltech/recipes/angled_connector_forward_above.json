@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCG",
+    "CGC",
+    "CCC"
+  ],
+  "key": {
+    "G": {
+      "item": "mechanicaltech:wood_gear"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:angled_connector_forward_above"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "mechanicaltech:block/angled_connector_up" },
+    "facing=south": { "model": "mechanicaltech:block/angled_connector_up", "y": 180 },
+    "facing=west": { "model": "mechanicaltech:block/angled_connector_up", "y": 270 },
+    "facing=east": { "model": "mechanicaltech:block/angled_connector_up", "y": 90 }
+  }
+}

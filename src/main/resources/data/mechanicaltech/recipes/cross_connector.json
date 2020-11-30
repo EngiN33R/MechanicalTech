@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GCG",
+    "C C",
+    "GCG"
+  ],
+  "key": {
+    "G": {
+      "item": "mechanicaltech:wood_gear"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:cross_connector"
+  }
+}

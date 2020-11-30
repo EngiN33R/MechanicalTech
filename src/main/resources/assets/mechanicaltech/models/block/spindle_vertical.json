@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+    "block": "mechanicaltech:block/spindle",
+    "particle": "mechanicaltech:block/spindle"
+	},
+	"elements": [
+		{
+			"from": [6, 0, 6],
+			"to": [10, 16, 10],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 6, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 4], "rotation": 270, "texture": "#block"},
+				"east": {"uv": [0, 0, 16, 4], "rotation": 270, "texture": "#block"},
+				"south": {"uv": [0, 0, 16, 4], "rotation": 90, "texture": "#block"},
+				"west": {"uv": [0, 0, 16, 4], "rotation": 90, "texture": "#block"},
+				"up": {"uv": [0, 4, 4, 8], "rotation": 180, "texture": "#block"},
+				"down": {"uv": [0, 4, 4, 8], "texture": "#block"}
+			}
+		}
+	]
+}

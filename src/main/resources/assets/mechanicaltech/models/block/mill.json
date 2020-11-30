@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "mechanicaltech:block/mill_front",
+    "south": "mechanicaltech:block/mill_side",
+    "east": "mechanicaltech:block/mill_side",
+    "west": "mechanicaltech:block/mill_side",
+    "up": "mechanicaltech:block/stone_input",
+    "down": "minecraft:block/furnace_top"
+  }
+}
