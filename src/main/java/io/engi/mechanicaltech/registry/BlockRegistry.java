@@ -4,7 +4,9 @@ import com.google.common.collect.ImmutableSet;
 import io.engi.fabricmc.lib.util.RelativeDirection;
 import io.engi.mechanicaltech.MechanicalTech;
 import io.engi.mechanicaltech.block.*;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.*;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -25,6 +27,7 @@ public class BlockRegistry {
 	// POWER RECEIVERS
 	public static MillBlock MILL = new MillBlock(Block.Settings.copy(Blocks.DISPENSER));
 	public static GrinderBlock GRINDER = new GrinderBlock(Block.Settings.copy(Blocks.DISPENSER));
+	public static SawmillBlock SAWMILL = new SawmillBlock(Block.Settings.copy(Blocks.DISPENSER));
 
 	// POWER CONDUCTORS
 	public static Block CROSS_CONNECTOR = new CrossConnectorBlock(Block.Settings.copy(Blocks.DISPENSER), ImmutableSet.of(MechanicalTech.PAYLOAD_ENERGY));
@@ -74,6 +77,7 @@ public class BlockRegistry {
 
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "mill"), MILL);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "grinder"), GRINDER);
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "sawmill"), SAWMILL);
 
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "cross_connector"), CROSS_CONNECTOR);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_right"), ANGLED_CONNECTOR_RIGHT);
@@ -83,5 +87,9 @@ public class BlockRegistry {
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_forward_below"), ANGLED_CONNECTOR_FORWARD_BELOW);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_forward_above"), ANGLED_CONNECTOR_FORWARD_ABOVE);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "spindle"), SPINDLE);
+	}
+
+	public static void initializeClient() {
+		BlockRenderLayerMap.INSTANCE.putBlock(SAWMILL, RenderLayer.getCutout());
 	}
 }

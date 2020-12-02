@@ -32,7 +32,9 @@ public class ItemRegistry {
 	public static final BlockItem MILL = new BlockItem(BlockRegistry.MILL,
 															   new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem GRINDER = new BlockItem(BlockRegistry.GRINDER,
-															   new Item.Settings().group(ItemGroup.REDSTONE));
+															   new Item.Settings().group(ITEM_GROUP));
+	public static final BlockItem SAWMILL = new BlockItem(BlockRegistry.SAWMILL,
+															   new Item.Settings().group(ITEM_GROUP));
 
 	public static final BlockItem CROSS_CONNECTOR = new BlockItem(BlockRegistry.CROSS_CONNECTOR,
 																  new Item.Settings().group(ITEM_GROUP));

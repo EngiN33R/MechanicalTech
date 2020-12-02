@@ -10,6 +10,7 @@
 
   "block.mechanicaltech.mill": "Mill",
   "block.mechanicaltech.grinder": "Grinder",
+  "block.mechanicaltech.sawmill": "Sawmill",
 
   "block.mechanicaltech.angled_connector_down": "Angled Connector (Forward-Down)",
   "block.mechanicaltech.angled_connector_forward_above": "Angled Connector (Up-Forward)",

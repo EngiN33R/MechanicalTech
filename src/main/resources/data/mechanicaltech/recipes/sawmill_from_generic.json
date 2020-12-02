@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C#C",
+    "CGG",
+    "CCC"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:wood_gears"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "#": {
+      "tag": "c:iron_ingots"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:sawmill"
+  }
+}

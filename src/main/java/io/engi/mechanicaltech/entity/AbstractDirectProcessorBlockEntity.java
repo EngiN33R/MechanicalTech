@@ -92,4 +92,9 @@ public abstract class AbstractDirectProcessorBlockEntity extends AbstractProcess
 			input.decrement(1);
 		}
 	}
+
+	@Override
+	protected int getProcessTime() {
+		return this.world.getRecipeManager().getFirstMatch(this.recipeType, this, this.world).map(ProcessingRecipe::getProcessingTime).orElse(200);
+	}
 }

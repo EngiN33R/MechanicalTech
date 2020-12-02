@@ -8,6 +8,7 @@ import net.minecraft.screen.ScreenHandlerType;
 public class GuiRegistry {
 	public static final ScreenHandlerType<MillScreenHandler> MILL_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(Identifiers.MILL, MillScreenHandler::new);
 	public static final ScreenHandlerType<GrinderScreenHandler> GRINDER_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(Identifiers.GRINDER, GrinderScreenHandler::new);
+	public static final ScreenHandlerType<SawmillScreenHandler> SAWMILL_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(Identifiers.SAWMILL, SawmillScreenHandler::new);
 
 	@SuppressWarnings("RedundantTypeArguments")
 	public static void initializeClient() {
@@ -17,6 +18,10 @@ public class GuiRegistry {
 		);
 		ScreenRegistry.<GrinderScreenHandler, GenericDirectProcessorScreen<GrinderScreenHandler>>register(
 			GRINDER_SCREEN_HANDLER,
+			(gui, inventory, title) -> new GenericDirectProcessorScreen<>(gui, inventory.player, title)
+		);
+		ScreenRegistry.<SawmillScreenHandler, GenericDirectProcessorScreen<SawmillScreenHandler>>register(
+			SAWMILL_SCREEN_HANDLER,
 			(gui, inventory, title) -> new GenericDirectProcessorScreen<>(gui, inventory.player, title)
 		);
 	}
