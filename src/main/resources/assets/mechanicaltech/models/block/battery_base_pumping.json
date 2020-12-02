@@ -6,6 +6,7 @@
     "east": "mechanicaltech:block/stone_input",
     "west": "mechanicaltech:block/stone_input",
     "up": "mechanicaltech:block/battery_base_top",
-    "down": "minecraft:block/furnace_top"
+    "down": "minecraft:block/furnace_top",
+    "particle": "minecraft:block/furnace_top"
   }
 }

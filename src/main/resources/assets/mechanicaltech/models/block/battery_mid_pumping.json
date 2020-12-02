@@ -6,6 +6,7 @@
     "east": "mechanicaltech:block/battery_mid_side",
     "west": "mechanicaltech:block/battery_mid_side",
     "up": "mechanicaltech:block/battery_mid_top",
-    "down": "mechanicaltech:block/battery_mid_top"
+    "down": "mechanicaltech:block/battery_mid_top",
+    "particle": "minecraft:block/furnace_top"
   }
 }
