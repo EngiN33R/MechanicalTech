@@ -1,5 +1,6 @@
 package io.engi.mechanicaltech.registry;
 
+import io.engi.mechanicaltech.item.StarchItem;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -48,7 +49,7 @@ public class ItemRegistry {
 	public static final Item WOOD_GEAR = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 
 	public static final Item FLOUR = new Item(new Item.Settings().group(ItemGroup.FOOD));
-	public static final Item STARCH = new Item(new Item.Settings().group(ItemGroup.FOOD));
+	public static final Item STARCH = new StarchItem(new Item.Settings().group(ItemGroup.FOOD));
 
 	public static final Item IRON_GRIT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 	public static final Item GOLD_GRIT = new Item(new Item.Settings().group(ItemGroup.MATERIALS));

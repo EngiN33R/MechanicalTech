@@ -1,0 +1,10 @@
+{
+  "type": "mechanicaltech:milling",
+  "ingredient": {
+    "item": "minecraft:beetroot"
+  },
+  "result":{
+    "item": "mechanicaltech:starch"
+  },
+  "time": 300
+}
