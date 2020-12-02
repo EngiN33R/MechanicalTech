@@ -1,0 +1,11 @@
+{
+  "type": "mechanicaltech:grinding",
+  "ingredient": {
+    "item": "minecraft:iron_ore"
+  },
+  "result": {
+    "item": "mechanicaltech:iron_grit",
+    "count": 2
+  },
+  "time": 400
+}

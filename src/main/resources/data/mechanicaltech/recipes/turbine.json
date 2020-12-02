@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCG",
+    "GIC",
+    "CCG"
+  ],
+  "key": {
+    "G": {
+      "item": "mechanicaltech:wood_gear"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:turbine"
+  }
+}

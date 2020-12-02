@@ -5,6 +5,7 @@
   "block.mechanicaltech.manual_crank": "Manual Crank",
 
   "block.mechanicaltech.mill": "Mill",
+  "block.mechanicaltech.grinder": "Grinder",
 
   "block.mechanicaltech.angled_connector_down": "Angled Connector (Forward-Down)",
   "block.mechanicaltech.angled_connector_forward_above": "Angled Connector (Up-Forward)",
@@ -21,6 +22,7 @@
   "item.mechanicaltech.manual_crank": "Manual Crank",
 
   "item.mechanicaltech.mill": "Mill",
+  "item.mechanicaltech.grinder": "Grinder",
 
   "item.mechanicaltech.angled_connector_down": "Angled Connector (Forward-Down)",
   "item.mechanicaltech.angled_connector_forward_above": "Angled Connector (Up-Forward)",
@@ -32,5 +34,8 @@
   "item.mechanicaltech.spindle": "Spindle",
 
   "item.mechanicaltech.wood_gear": "Wooden Gear",
-  "item.mechanicaltech.flour": "Flour"
+  "item.mechanicaltech.flour": "Flour",
+  "item.mechanicaltech.starch": "Starch",
+  "item.mechanicaltech.iron_grit": "Iron Grit",
+  "item.mechanicaltech.gold_grit": "Gold Grit"
 }

@@ -1,10 +1,10 @@
 {
   "type": "mechanicaltech:milling",
   "ingredient": {
-    "item": "minecraft:wheat"
+    "item": "minecraft:potato"
   },
   "result":{
-    "item": "mechanicaltech:flour"
+    "item": "mechanicaltech:starch"
   },
   "time": 300
 }

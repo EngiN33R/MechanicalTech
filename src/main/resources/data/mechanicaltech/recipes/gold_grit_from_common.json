@@ -1,0 +1,11 @@
+{
+  "type": "mechanicaltech:grinding",
+  "ingredient": {
+    "tag": "c:gold_ores"
+  },
+  "result": {
+    "item": "mechanicaltech:gold_grit",
+    "count": 2
+  },
+  "time": 400
+}

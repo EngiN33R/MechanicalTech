@@ -19,6 +19,7 @@ public class BlockRegistry {
 
 	// POWER RECEIVERS
 	public static MillBlock MILL = new MillBlock(Block.Settings.copy(Blocks.DISPENSER));
+	public static GrinderBlock GRINDER = new GrinderBlock(Block.Settings.copy(Blocks.DISPENSER));
 
 	// POWER CONDUCTORS
 	public static Block CROSS_CONNECTOR = new CrossConnectorBlock(Block.Settings.copy(Blocks.DISPENSER), ImmutableSet.of(MechanicalTech.PAYLOAD_ENERGY));
@@ -63,6 +64,7 @@ public class BlockRegistry {
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "manual_crank"), MANUAL_CRANK);
 
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "mill"), MILL);
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "grinder"), GRINDER);
 
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "cross_connector"), CROSS_CONNECTOR);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_right"), ANGLED_CONNECTOR_RIGHT);

@@ -21,6 +21,8 @@ public class EntityRegistry {
 
 	public static final BlockEntityType<MillBlockEntity> MILL_TYPE = BlockEntityType.Builder.create(
 		MillBlockEntity::new, BlockRegistry.MANUAL_CRANK).build(null);
+	public static final BlockEntityType<GrinderBlockEntity> GRINDER_TYPE = BlockEntityType.Builder.create(
+		GrinderBlockEntity::new, BlockRegistry.GRINDER).build(null);
 
 	public static void initialize() {
 		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "manual_crank"), MANUAL_CRANK_TYPE);
@@ -28,6 +30,7 @@ public class EntityRegistry {
 		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "windsail"), WINDSAIL_TYPE);
 		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "waterwheel"), WATERWHEEL_TYPE);
 		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "mill"), MILL_TYPE);
+		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "grinder"), GRINDER_TYPE);
 	}
 
 	public static void initializeClient() {

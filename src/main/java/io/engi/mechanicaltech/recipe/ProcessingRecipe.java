@@ -1,6 +1,5 @@
 package io.engi.mechanicaltech.recipe;
 
-import io.engi.mechanicaltech.registry.RecipeRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.inventory.Inventory;
@@ -10,16 +9,16 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-public class ProcessingRecipe implements Recipe<Inventory> {
-	public static final ProcessingRecipeSerializer SERIALIZER = new ProcessingRecipeSerializer(200);
-
+public abstract class ProcessingRecipe implements Recipe<Inventory> {
+	protected final RecipeType<? extends ProcessingRecipe> type;
 	protected final Identifier id;
 	protected final String group;
 	protected final Ingredient input;
 	protected final ItemStack output;
 	protected final int processingTime;
 
-	public ProcessingRecipe(Identifier id, String group, Ingredient input, ItemStack output, int processingTime) {
+	public ProcessingRecipe(RecipeType<? extends ProcessingRecipe> type, Identifier id, String group, Ingredient input, ItemStack output, int processingTime) {
+		this.type = type;
 		this.id = id;
 		this.group = group;
 		this.input = input;
@@ -63,12 +62,7 @@ public class ProcessingRecipe implements Recipe<Inventory> {
 		return this.id;
 	}
 
-	@Override
-	public RecipeSerializer<ProcessingRecipe> getSerializer() {
-		return SERIALIZER;
-	}
-
 	public RecipeType<?> getType() {
-		return RecipeRegistry.MILLING;
+		return type;
 	}
 }

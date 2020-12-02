@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LWL",
+    "WGW",
+    "LWL"
+  ],
+  "key": {
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "L": {
+      "tag": "minecraft:wooden_stairs"
+    },
+    "G": {
+      "tag": "c:wood_gears"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:waterwheel"
+  }
+}

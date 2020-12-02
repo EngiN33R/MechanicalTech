@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "I I",
+    "CAC"
+  ],
+  "key": {
+    "G": {
+      "item": "c:wood_gears"
+    },
+    "I": {
+      "tag": "c:iron_ingots"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "A": {
+      "tag": "minecraft:anvil"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:mill"
+  }
+}

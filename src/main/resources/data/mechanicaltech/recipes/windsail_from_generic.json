@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#I#",
+    "IGI",
+    "#I#"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "tag": "minecraft:wool"
+    },
+    "G": {
+      "tag": "c:wood_gears"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:windsail"
+  }
+}

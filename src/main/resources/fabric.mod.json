@@ -17,9 +17,7 @@
       "io.engi.mechanicaltech.MechanicalTech"
     ]
   },
-  "mixins":[
-    "mechanicaltech.mixins.json"
-  ],
+  "mixins":[],
   "depends":{
     "fabricloader":">=0.10.8",
     "fabric":"*",
