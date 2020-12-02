@@ -37,5 +37,7 @@
   "item.mechanicaltech.flour": "Flour",
   "item.mechanicaltech.starch": "Starch",
   "item.mechanicaltech.iron_grit": "Iron Grit",
-  "item.mechanicaltech.gold_grit": "Gold Grit"
+  "item.mechanicaltech.gold_grit": "Gold Grit",
+
+  "itemGroup.mechanicaltech.items": "Mechanical Tech"
 }

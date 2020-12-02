@@ -1,6 +1,7 @@
 package io.engi.mechanicaltech.registry;
 
 import io.engi.mechanicaltech.item.StarchItem;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -8,43 +9,47 @@ import net.minecraft.util.registry.Registry;
 import static io.engi.mechanicaltech.MechanicalTech.MODID;
 
 public class ItemRegistry {
+	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
+		new Identifier(MODID, "items"),
+		() -> new ItemStack(ItemRegistry.WOOD_GEAR));
+
 	public static final BlockItem TURBINE = new BlockItem(BlockRegistry.TURBINE,
-														  new Item.Settings().group(ItemGroup.REDSTONE));
+														  new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem WINDSAIL = new BlockItem(BlockRegistry.WINDSAIL,
-														   new Item.Settings().group(ItemGroup.REDSTONE));
+														   new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem WATERWHEEL = new BlockItem(BlockRegistry.WATERWHEEL,
-															 new Item.Settings().group(ItemGroup.REDSTONE));
+															 new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem MANUAL_CRANK = new BlockItem(BlockRegistry.MANUAL_CRANK,
-															   new Item.Settings().group(ItemGroup.REDSTONE));
+															   new Item.Settings().group(ITEM_GROUP));
 
 	public static final BlockItem BATTERY_BASE = new BlockItem(BlockRegistry.BATTERY_BASE,
-													   new Item.Settings().group(ItemGroup.REDSTONE));
+													   new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem BATTERY_MID = new BlockItem(BlockRegistry.BATTERY_MID,
-													   new Item.Settings().group(ItemGroup.REDSTONE));
+													   new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem BATTERY_CAP = new BlockItem(BlockRegistry.BATTERY_CAP,
-													   new Item.Settings().group(ItemGroup.REDSTONE));
+													   new Item.Settings().group(ITEM_GROUP));
 
 	public static final BlockItem MILL = new BlockItem(BlockRegistry.MILL,
-															   new Item.Settings().group(ItemGroup.REDSTONE));
+															   new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem GRINDER = new BlockItem(BlockRegistry.GRINDER,
 															   new Item.Settings().group(ItemGroup.REDSTONE));
 
 	public static final BlockItem CROSS_CONNECTOR = new BlockItem(BlockRegistry.CROSS_CONNECTOR,
-																  new Item.Settings().group(ItemGroup.REDSTONE));
+																  new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem ANGLED_CONNECTOR_RIGHT = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_RIGHT,
-																		 new Item.Settings().group(ItemGroup.REDSTONE));
+																		 new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem ANGLED_CONNECTOR_LEFT = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_LEFT,
-																		new Item.Settings().group(ItemGroup.REDSTONE));
+																		new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem ANGLED_CONNECTOR_DOWN = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_DOWN,
-																		new Item.Settings().group(ItemGroup.REDSTONE));
+																		new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem ANGLED_CONNECTOR_UP = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_UP,
-																	  new Item.Settings().group(ItemGroup.REDSTONE));
+																	  new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem ANGLED_CONNECTOR_FORWARD_BELOW = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_FORWARD_BELOW,
-																				 new Item.Settings().group(ItemGroup.REDSTONE));
+																				 new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem ANGLED_CONNECTOR_FORWARD_ABOVE = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_FORWARD_ABOVE,
-																				 new Item.Settings().group(ItemGroup.REDSTONE));
+																				 new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem SPINDLE = new BlockItem(BlockRegistry.SPINDLE,
-														  new Item.Settings().group(ItemGroup.REDSTONE));
+														  new Item.Settings().group(ITEM_GROUP));
 
 	public static final Item WOOD_GEAR = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 
@@ -66,6 +71,7 @@ public class ItemRegistry {
 
 		Registry.register(Registry.ITEM, new Identifier(MODID, "mill"), MILL);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "grinder"), GRINDER);
+		Registry.register(Registry.ITEM, new Identifier(MODID, "sawmill"), SAWMILL);
 
 		Registry.register(Registry.ITEM, new Identifier(MODID, "cross_connector"), CROSS_CONNECTOR);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "angled_connector_right"), ANGLED_CONNECTOR_RIGHT);
