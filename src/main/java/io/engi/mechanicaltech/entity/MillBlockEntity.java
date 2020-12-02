@@ -54,7 +54,7 @@ public class MillBlockEntity extends AbstractDirectProcessorBlockEntity {
 
 		Recipe<?> recipe = this.world.getRecipeManager().getFirstMatch(this.recipeType, this, this.world).orElse(null);
 		if (canAcceptRecipeOutput(recipe)) {
-			processTime += MathHelper.clamp(((Payload<Integer>) payload).getPayload(), 0, processTimeTotal);
+			processTime = MathHelper.clamp(processTime + ((Payload<Integer>) payload).getPayload(), 0, processTimeTotal);
 			if (processTime == processTimeTotal) {
 				processTime = 0;
 				processTimeTotal = getProcessTime();
