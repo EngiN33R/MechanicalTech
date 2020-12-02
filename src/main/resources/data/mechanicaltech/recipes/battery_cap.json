@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CBC",
+    "CIC",
+    "CGC"
+  ],
+  "key": {
+    "G": {
+      "item": "mechanicaltech:wood_gear"
+    },
+    "C": {
+      "item": "minecraft:cobblestone"
+    },
+    "I": {
+      "item": "mechanicaltech:spindle"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    }
+  },
+  "result": {
+    "item": "mechanicaltech:battery_cap"
+  }
+}

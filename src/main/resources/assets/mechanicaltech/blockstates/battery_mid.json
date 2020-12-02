@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north,pumping=false,dumping=false": { "model": "mechanicaltech:block/battery_mid" },
+    "facing=south,pumping=false,dumping=false": { "model": "mechanicaltech:block/battery_mid", "y": 180 },
+    "facing=west,pumping=false,dumping=false": { "model": "mechanicaltech:block/battery_mid", "y": 270 },
+    "facing=east,pumping=false,dumping=false": { "model": "mechanicaltech:block/battery_mid", "y": 90 },
+    "facing=north,pumping=false,dumping=true": { "model": "mechanicaltech:block/battery_mid_dumping" },
+    "facing=south,pumping=false,dumping=true": { "model": "mechanicaltech:block/battery_mid_dumping", "y": 180 },
+    "facing=west,pumping=false,dumping=true": { "model": "mechanicaltech:block/battery_mid_dumping", "y": 270 },
+    "facing=east,pumping=false,dumping=true": { "model": "mechanicaltech:block/battery_mid_dumping", "y": 90 },
+    "facing=north,pumping=true,dumping=false": { "model": "mechanicaltech:block/battery_mid_pumping" },
+    "facing=south,pumping=true,dumping=false": { "model": "mechanicaltech:block/battery_mid_pumping", "y": 180 },
+    "facing=west,pumping=true,dumping=false": { "model": "mechanicaltech:block/battery_mid_pumping", "y": 270 },
+    "facing=east,pumping=true,dumping=false": { "model": "mechanicaltech:block/battery_mid_pumping", "y": 90 },
+    "facing=north,pumping=true,dumping=true": { "model": "mechanicaltech:block/battery_mid_both" },
+    "facing=south,pumping=true,dumping=true": { "model": "mechanicaltech:block/battery_mid_both", "y": 180 },
+    "facing=west,pumping=true,dumping=true": { "model": "mechanicaltech:block/battery_mid_both", "y": 270 },
+    "facing=east,pumping=true,dumping=true": { "model": "mechanicaltech:block/battery_mid_both", "y": 90 }
+  }
+}

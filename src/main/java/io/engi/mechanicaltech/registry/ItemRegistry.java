@@ -16,6 +16,13 @@ public class ItemRegistry {
 	public static final BlockItem MANUAL_CRANK = new BlockItem(BlockRegistry.MANUAL_CRANK,
 															   new Item.Settings().group(ItemGroup.REDSTONE));
 
+	public static final BlockItem BATTERY_BASE = new BlockItem(BlockRegistry.BATTERY_BASE,
+													   new Item.Settings().group(ItemGroup.REDSTONE));
+	public static final BlockItem BATTERY_MID = new BlockItem(BlockRegistry.BATTERY_MID,
+													   new Item.Settings().group(ItemGroup.REDSTONE));
+	public static final BlockItem BATTERY_CAP = new BlockItem(BlockRegistry.BATTERY_CAP,
+													   new Item.Settings().group(ItemGroup.REDSTONE));
+
 	public static final BlockItem MILL = new BlockItem(BlockRegistry.MILL,
 															   new Item.Settings().group(ItemGroup.REDSTONE));
 	public static final BlockItem GRINDER = new BlockItem(BlockRegistry.GRINDER,
@@ -51,6 +58,10 @@ public class ItemRegistry {
 		Registry.register(Registry.ITEM, new Identifier(MODID, "windsail"), WINDSAIL);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "waterwheel"), WATERWHEEL);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "manual_crank"), MANUAL_CRANK);
+
+		Registry.register(Registry.ITEM, new Identifier(MODID, "battery_base"), BATTERY_BASE);
+		Registry.register(Registry.ITEM, new Identifier(MODID, "battery_mid"), BATTERY_MID);
+		Registry.register(Registry.ITEM, new Identifier(MODID, "battery_cap"), BATTERY_CAP);
 
 		Registry.register(Registry.ITEM, new Identifier(MODID, "mill"), MILL);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "grinder"), GRINDER);

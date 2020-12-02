@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "mechanicaltech:block/stone_output",
+    "south": "mechanicaltech:block/battery_base_back_pumping",
+    "east": "mechanicaltech:block/stone_input",
+    "west": "mechanicaltech:block/stone_input",
+    "up": "mechanicaltech:block/battery_base_top",
+    "down": "minecraft:block/furnace_top"
+  }
+}

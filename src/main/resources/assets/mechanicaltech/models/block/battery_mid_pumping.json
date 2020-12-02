@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "mechanicaltech:block/battery_mid_back",
+    "south": "mechanicaltech:block/battery_mid_back_pumping",
+    "east": "mechanicaltech:block/battery_mid_side",
+    "west": "mechanicaltech:block/battery_mid_side",
+    "up": "mechanicaltech:block/battery_mid_top",
+    "down": "mechanicaltech:block/battery_mid_top"
+  }
+}

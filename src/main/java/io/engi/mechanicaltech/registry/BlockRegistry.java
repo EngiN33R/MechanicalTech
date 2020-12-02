@@ -17,6 +17,11 @@ public class BlockRegistry {
 	public static WaterwheelBlock WATERWHEEL = new WaterwheelBlock(Block.Settings.copy(Blocks.OAK_PLANKS), 1);
 	public static ManualCrankBlock MANUAL_CRANK = new ManualCrankBlock(Block.Settings.copy(Blocks.OAK_FENCE), 5);
 
+	// POWER STORAGE
+	public static BatteryBaseBlock BATTERY_BASE = new BatteryBaseBlock(Block.Settings.copy(Blocks.DISPENSER));
+	public static BatteryStorageBlock BATTERY_MID = new BatteryStorageBlock(Block.Settings.copy(Blocks.DISPENSER));
+	public static BatteryCapBlock BATTERY_CAP = new BatteryCapBlock(Block.Settings.copy(Blocks.DISPENSER));
+
 	// POWER RECEIVERS
 	public static MillBlock MILL = new MillBlock(Block.Settings.copy(Blocks.DISPENSER));
 	public static GrinderBlock GRINDER = new GrinderBlock(Block.Settings.copy(Blocks.DISPENSER));
@@ -62,6 +67,10 @@ public class BlockRegistry {
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "windsail"), WINDSAIL);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "waterwheel"), WATERWHEEL);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "manual_crank"), MANUAL_CRANK);
+
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "battery_base"), BATTERY_BASE);
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "battery_mid"), BATTERY_MID);
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "battery_cap"), BATTERY_CAP);
 
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "mill"), MILL);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "grinder"), GRINDER);
