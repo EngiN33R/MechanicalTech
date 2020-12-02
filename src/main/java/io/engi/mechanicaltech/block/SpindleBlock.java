@@ -1,19 +1,14 @@
 package io.engi.mechanicaltech.block;
 
 import com.google.common.collect.ImmutableSet;
-import io.engi.dynamo.api.Payload;
 import io.engi.mechanicaltech.MechanicalTech;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 public class SpindleBlock extends OrientableConnectorBlock {
 	public static final VoxelShape X_SHAPE = Block.createCuboidShape(0.0D, 6.0D, 6.0D, 16.0D, 10.0D, 10.0D);
@@ -27,14 +22,14 @@ public class SpindleBlock extends OrientableConnectorBlock {
 
 		this.setDefaultState(
 			this.stateManager.getDefaultState()
-							 .with(Properties.AXIS, Direction.Axis.Z)
+							 .with(FacingBlock.FACING, Direction.NORTH)
 							 .with(LOCKED, false)
 		);
 	}
 
 	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-		switch (state.get(Properties.AXIS)) {
+		switch (state.get(FacingBlock.FACING).getAxis()) {
 			case X:
 				return X_SHAPE;
 			case Y:

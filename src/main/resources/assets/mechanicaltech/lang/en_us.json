@@ -12,12 +12,9 @@
   "block.mechanicaltech.grinder": "Grinder",
   "block.mechanicaltech.sawmill": "Sawmill",
 
-  "block.mechanicaltech.angled_connector_down": "Angled Connector (Forward-Down)",
-  "block.mechanicaltech.angled_connector_forward_above": "Angled Connector (Up-Forward)",
-  "block.mechanicaltech.angled_connector_forward_below": "Angled Connector (Down-Forward)",
-  "block.mechanicaltech.angled_connector_left": "Angled Connector (Forward-Left)",
-  "block.mechanicaltech.angled_connector_right": "Angled Connector (Forward-Right)",
-  "block.mechanicaltech.angled_connector_up": "Angled Connector (Forward-Up)",
+  "block.mechanicaltech.angled_connector_down": "Angled Connector (Down)",
+  "block.mechanicaltech.angled_connector_right": "Angled Connector (Side)",
+  "block.mechanicaltech.angled_connector_up": "Angled Connector (Up)",
   "block.mechanicaltech.cross_connector": "Cross Connector",
   "block.mechanicaltech.spindle": "Spindle",
 
@@ -29,12 +26,9 @@
   "item.mechanicaltech.mill": "Mill",
   "item.mechanicaltech.grinder": "Grinder",
 
-  "item.mechanicaltech.angled_connector_down": "Angled Connector (Forward-Down)",
-  "item.mechanicaltech.angled_connector_forward_above": "Angled Connector (Up-Forward)",
-  "item.mechanicaltech.angled_connector_forward_below": "Angled Connector (Down-Forward)",
-  "item.mechanicaltech.angled_connector_left": "Angled Connector (Forward-Left)",
-  "item.mechanicaltech.angled_connector_right": "Angled Connector (Forward-Right)",
-  "item.mechanicaltech.angled_connector_up": "Angled Connector (Forward-Top)",
+  "item.mechanicaltech.angled_connector_down": "Angled Connector (Down)",
+  "item.mechanicaltech.angled_connector_right": "Angled Connector (Side)",
+  "item.mechanicaltech.angled_connector_up": "Angled Connector (Up)",
   "item.mechanicaltech.cross_connector": "Cross Connector",
   "item.mechanicaltech.spindle": "Spindle",
 

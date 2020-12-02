@@ -1,7 +1,10 @@
 {
   "variants": {
-    "axis=z": { "model": "mechanicaltech:block/spindle_horizontal" },
-    "axis=x": { "model": "mechanicaltech:block/spindle_horizontal", "y": 90 },
-    "axis=y": { "model": "mechanicaltech:block/spindle_vertical" }
+    "facing=north": { "model": "mechanicaltech:block/spindle_horizontal" },
+    "facing=south": { "model": "mechanicaltech:block/spindle_horizontal" },
+    "facing=east": { "model": "mechanicaltech:block/spindle_horizontal", "y": 90 },
+    "facing=west": { "model": "mechanicaltech:block/spindle_horizontal", "y": 90 },
+    "facing=up": { "model": "mechanicaltech:block/spindle_vertical" },
+    "facing=down": { "model": "mechanicaltech:block/spindle_vertical" }
   }
 }

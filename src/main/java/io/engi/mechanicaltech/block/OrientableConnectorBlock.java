@@ -14,10 +14,7 @@ import net.minecraft.world.*;
 
 import java.util.Set;
 
-import static net.minecraft.state.property.Properties.AXIS;
-import static net.minecraft.util.math.Direction.Axis.*;
-
-public class OrientableConnectorBlock extends Block implements Connector {
+public class OrientableConnectorBlock extends FacingBlock implements Connector {
 	public static BooleanProperty LOCKED = BooleanProperty.of("locked");
 
 	private final Set<Identifier> types;
@@ -27,7 +24,7 @@ public class OrientableConnectorBlock extends Block implements Connector {
 		this.types = types;
 		this.setDefaultState(
 			this.stateManager.getDefaultState()
-							 .with(AXIS, Direction.Axis.X)
+							 .with(FACING, Direction.NORTH)
 							 .with(LOCKED, false)
 		);
 	}
@@ -55,7 +52,7 @@ public class OrientableConnectorBlock extends Block implements Connector {
 		BlockState state = world.getBlockState(pos);
 		BlockEntity entity = world.getBlockEntity(pos);
 		if (state.getBlock() == this) {
-			return !state.get(LOCKED) || state.get(AXIS) == direction.getAxis();
+			return !state.get(LOCKED) || state.get(FACING).getAxis() == direction.getAxis();
 		}
 		if (state.getBlock() instanceof Connector) {
 			return types.stream().anyMatch(type -> ((Connector) state.getBlock()).canAccept(world, pos, direction.getOpposite(), type));
@@ -70,19 +67,19 @@ public class OrientableConnectorBlock extends Block implements Connector {
 		boolean down = isConnectorValid(world, pos.down(), Direction.DOWN);
 		boolean up = isConnectorValid(world, pos.up(), Direction.UP);
 		if (!state.get(LOCKED) && (down || up)) {
-			return state.with(AXIS, Y).with(LOCKED, true);
+			return state.with(FACING, down ? Direction.UP : Direction.DOWN).with(LOCKED, true);
 		}
 
 		boolean north = isConnectorValid(world, pos.north(), Direction.NORTH);
 		boolean south = isConnectorValid(world, pos.south(), Direction.SOUTH);
 		if (!state.get(LOCKED) && (north || south)) {
-			return state.with(AXIS, Z).with(LOCKED, true);
+			return state.with(FACING, north ? Direction.SOUTH : Direction.NORTH).with(LOCKED, true);
 		}
 
 		boolean east = isConnectorValid(world, pos.east(), Direction.EAST);
 		boolean west = isConnectorValid(world, pos.west(), Direction.WEST);
 		if (!state.get(LOCKED) && (east || west)) {
-			return state.with(AXIS, X).with(LOCKED, true);
+			return state.with(FACING, east ? Direction.WEST : Direction.EAST).with(LOCKED, true);
 		}
 		if (east || west || north || south || up || down) {
 			return state;
@@ -92,13 +89,14 @@ public class OrientableConnectorBlock extends Block implements Connector {
 
 	@Override
 	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-		builder.add(AXIS, LOCKED);
+		super.appendProperties(builder);
+		builder.add(FACING, LOCKED);
 	}
 
 	@Override
 	public boolean canAccept(BlockView world, BlockPos pos, Direction direction, Identifier type) {
 		BlockState state = world.getBlockState(pos);
-		switch (state.get(AXIS)) {
+		switch (state.get(FACING).getAxis()) {
 			case X:
 				return direction == Direction.EAST || direction == Direction.WEST;
 			case Y:

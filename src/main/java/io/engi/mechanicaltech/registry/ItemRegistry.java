@@ -40,16 +40,10 @@ public class ItemRegistry {
 																  new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem ANGLED_CONNECTOR_RIGHT = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_RIGHT,
 																		 new Item.Settings().group(ITEM_GROUP));
-	public static final BlockItem ANGLED_CONNECTOR_LEFT = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_LEFT,
-																		new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem ANGLED_CONNECTOR_DOWN = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_DOWN,
 																		new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem ANGLED_CONNECTOR_UP = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_UP,
 																	  new Item.Settings().group(ITEM_GROUP));
-	public static final BlockItem ANGLED_CONNECTOR_FORWARD_BELOW = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_FORWARD_BELOW,
-																				 new Item.Settings().group(ITEM_GROUP));
-	public static final BlockItem ANGLED_CONNECTOR_FORWARD_ABOVE = new BlockItem(BlockRegistry.ANGLED_CONNECTOR_FORWARD_ABOVE,
-																				 new Item.Settings().group(ITEM_GROUP));
 	public static final BlockItem SPINDLE = new BlockItem(BlockRegistry.SPINDLE,
 														  new Item.Settings().group(ITEM_GROUP));
 
@@ -77,11 +71,8 @@ public class ItemRegistry {
 
 		Registry.register(Registry.ITEM, new Identifier(MODID, "cross_connector"), CROSS_CONNECTOR);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "angled_connector_right"), ANGLED_CONNECTOR_RIGHT);
-		Registry.register(Registry.ITEM, new Identifier(MODID, "angled_connector_left"), ANGLED_CONNECTOR_LEFT);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "angled_connector_down"), ANGLED_CONNECTOR_DOWN);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "angled_connector_up"), ANGLED_CONNECTOR_UP);
-		Registry.register(Registry.ITEM, new Identifier(MODID, "angled_connector_forward_below"), ANGLED_CONNECTOR_FORWARD_BELOW);
-		Registry.register(Registry.ITEM, new Identifier(MODID, "angled_connector_forward_above"), ANGLED_CONNECTOR_FORWARD_ABOVE);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "spindle"), SPINDLE);
 
 		Registry.register(Registry.ITEM, new Identifier(MODID, "wood_gear"), WOOD_GEAR);

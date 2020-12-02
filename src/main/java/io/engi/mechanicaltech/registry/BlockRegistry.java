@@ -36,11 +36,6 @@ public class BlockRegistry {
 		RelativeDirection.RIGHT,
 		ImmutableSet.of(MechanicalTech.PAYLOAD_ENERGY)
 	);
-	public static Block ANGLED_CONNECTOR_LEFT = new AngledConnectorBlock(
-		Block.Settings.copy(Blocks.DISPENSER),
-		RelativeDirection.LEFT,
-		ImmutableSet.of(MechanicalTech.PAYLOAD_ENERGY)
-	);
 	public static Block ANGLED_CONNECTOR_UP = new AngledConnectorBlock(
 		Block.Settings.copy(Blocks.DISPENSER),
 		RelativeDirection.UP,
@@ -49,18 +44,6 @@ public class BlockRegistry {
 	public static Block ANGLED_CONNECTOR_DOWN = new AngledConnectorBlock(
 		Block.Settings.copy(Blocks.DISPENSER),
 		RelativeDirection.DOWN,
-		ImmutableSet.of(MechanicalTech.PAYLOAD_ENERGY)
-	);
-	public static Block ANGLED_CONNECTOR_FORWARD_BELOW = new AngledConnectorBlock(
-		Block.Settings.copy(Blocks.DISPENSER),
-		RelativeDirection.DOWN,
-		RelativeDirection.FRONT,
-		ImmutableSet.of(MechanicalTech.PAYLOAD_ENERGY)
-	);
-	public static Block ANGLED_CONNECTOR_FORWARD_ABOVE = new AngledConnectorBlock(
-		Block.Settings.copy(Blocks.DISPENSER),
-		RelativeDirection.UP,
-		RelativeDirection.FRONT,
 		ImmutableSet.of(MechanicalTech.PAYLOAD_ENERGY)
 	);
 	public static Block SPINDLE = new SpindleBlock(Block.Settings.copy(Blocks.COBBLESTONE_WALL));
@@ -81,11 +64,8 @@ public class BlockRegistry {
 
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "cross_connector"), CROSS_CONNECTOR);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_right"), ANGLED_CONNECTOR_RIGHT);
-		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_left"), ANGLED_CONNECTOR_LEFT);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_up"), ANGLED_CONNECTOR_UP);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_down"), ANGLED_CONNECTOR_DOWN);
-		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_forward_below"), ANGLED_CONNECTOR_FORWARD_BELOW);
-		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_forward_above"), ANGLED_CONNECTOR_FORWARD_ABOVE);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "spindle"), SPINDLE);
 	}
 
