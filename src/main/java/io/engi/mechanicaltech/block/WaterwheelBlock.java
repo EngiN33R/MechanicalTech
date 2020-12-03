@@ -41,10 +41,12 @@ public class WaterwheelBlock extends AbstractTurbineAttachmentBlock implements W
 			level = 0;
 		}
 		if (sideState2.getFluidState().isIn(FluidTags.WATER) && !sideState1.getFluidState().isStill()) {
-			boolean average = level != 0;
+			boolean otherSide = level != 0;
 			level += sideState2.getFluidState().getLevel();
-			if (average) {
+			if (otherSide) {
 				level /= 2;
+			} else {
+				level--;
 			}
 		} else {
 			level = level == 0 ? 0 : level - 1;
@@ -53,6 +55,23 @@ public class WaterwheelBlock extends AbstractTurbineAttachmentBlock implements W
 			return null;
 		}
 		return Fluids.WATER.getFlowing(level, world.getBlockState(pos.down()).isAir());
+	}
+
+	private BlockState computeFlow(WorldAccess world, BlockPos pos, BlockState state) {
+		FluidState selfFluidState = computeWaterlogged(world, pos, state.get(FACING));
+
+		Direction flowingFrom = state.get(FACING).rotateYClockwise();
+		BlockState flowSource = world.getBlockState(pos.offset(flowingFrom.getOpposite()));
+		BlockState flowTarget = world.getBlockState(pos.offset(flowingFrom));
+		if (selfFluidState != null && flowSource.getFluidState().isIn(FluidTags.WATER)
+			&& (flowSource.getFluidState().isStill() || Utilities.isFlowingInto(world, pos, flowingFrom))
+			&& flowTarget.isAir()) {
+			int newLevel = selfFluidState.getLevel() - 1;
+			if (newLevel > 0) {
+				world.setBlockState(pos.offset(flowingFrom), Blocks.WATER.getDefaultState().with(FluidBlock.LEVEL, newLevel), 3);
+			}
+		}
+		return state.with(WATER_LEVEL, selfFluidState == null ? 0 : selfFluidState.getLevel());
 	}
 
 	@Override
@@ -72,10 +91,7 @@ public class WaterwheelBlock extends AbstractTurbineAttachmentBlock implements W
 		if (facing == null) {
 			return getDefaultState();
 		}
-		FluidState fluidState = computeWaterlogged(ctx.getWorld(), ctx.getBlockPos(), facing);
-		return getDefaultState()
-			.with(FACING, facing)
-			.with(WATER_LEVEL, fluidState == null ? 0 : fluidState.getLevel());
+		return computeFlow(ctx.getWorld(), ctx.getBlockPos(), getDefaultState()).with(FACING, facing);
 	}
 
 	@Override
@@ -91,21 +107,9 @@ public class WaterwheelBlock extends AbstractTurbineAttachmentBlock implements W
 		if (state.get(WATER_LEVEL) > 0) {
 			world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
 		}
-		FluidState fluidState = computeWaterlogged(world, pos, state.get(FACING));
-
-		Direction withFlow = state.get(FACING).rotateYClockwise();
-		BlockState flowingInto = world.getBlockState(pos.offset(withFlow.getOpposite()));
-		if (fluidState != null && flowingInto.getFluidState().isIn(FluidTags.WATER)
-			&& Utilities.isFlowingInto(world, pos, withFlow) && world.getBlockState(pos.offset(withFlow)).isAir()) {
-			int newLevel = fluidState.getLevel() - 1;
-			if (newLevel > 0) {
-				world.setBlockState(pos.offset(withFlow), Blocks.WATER.getDefaultState().with(FluidBlock.LEVEL, newLevel), 3);
-			}
-		}
 		world.setBlockState(
 			pos,
-			state
-				.with(WATER_LEVEL, fluidState == null ? 0 : fluidState.getLevel()),
+			computeFlow(world, pos, state),
 			3
 		);
 		return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
