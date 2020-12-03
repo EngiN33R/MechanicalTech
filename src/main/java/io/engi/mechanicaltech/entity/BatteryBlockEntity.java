@@ -55,7 +55,7 @@ public class BatteryBlockEntity extends AbstractSupplierBlockEntity implements R
 		world.setBlockState(
 			pos.offset(Direction.UP, batteryHeight),
 			world.getBlockState(pos.offset(Direction.UP, batteryHeight))
-				 .with(AbstractBatteryMultipart.PUMPING, pumpedPower >= 55)
+				 .with(AbstractBatteryMultipart.PUMPING, pumpedPower >= (batteryHeight * 20 - 5))
 		);
 
 		int pumpedHeight = pumpedPower / 20;
