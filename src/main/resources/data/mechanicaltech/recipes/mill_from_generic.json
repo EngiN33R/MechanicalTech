@@ -7,13 +7,13 @@
   ],
   "key": {
     "G": {
-      "item": "mechanicaltech:wood_gear"
+      "tag": "c:wood_gears"
     },
     "C": {
       "item": "minecraft:cobblestone"
     },
     "I": {
-      "item": "minecraft:iron_ingot"
+      "tag": "c:iron_ingots"
     }
   },
   "result": {
