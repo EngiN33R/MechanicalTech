@@ -17,7 +17,7 @@ public class BlockRegistry {
 	public static TurbineBlock TURBINE = new TurbineBlock(Block.Settings.copy(Blocks.IRON_BLOCK), 1);
 	public static WindsailBlock WINDSAIL = new WindsailBlock(Block.Settings.copy(Blocks.WHITE_WOOL), 1);
 	public static WaterwheelBlock WATERWHEEL = new WaterwheelBlock(Block.Settings.copy(Blocks.OAK_PLANKS), 1);
-	public static ManualCrankBlock MANUAL_CRANK = new ManualCrankBlock(Block.Settings.copy(Blocks.OAK_FENCE), 5);
+	public static ManualCrankBlock MANUAL_CRANK = new ManualCrankBlock(Block.Settings.copy(Blocks.OAK_FENCE));
 
 	// POWER STORAGE
 	public static BatteryBaseBlock BATTERY_BASE = new BatteryBaseBlock(Block.Settings.copy(Blocks.DISPENSER));

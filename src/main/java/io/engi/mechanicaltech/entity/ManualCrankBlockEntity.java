@@ -7,38 +7,16 @@ import io.engi.mechanicaltech.registry.EntityRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FacingBlock;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Tickable;
 import net.minecraft.util.math.Direction;
 
 public class ManualCrankBlockEntity extends BlockEntity implements Tickable {
-	public static final int DEFAULT_STEP = 100;
-
     private boolean active;
     private float rotation;
     private int ticksActive;
-    private int suppliedPerCrank;
 
 	public ManualCrankBlockEntity() {
-		this(DEFAULT_STEP);
-	}
-
-	public ManualCrankBlockEntity(int suppliedPerCrank) {
-        super(EntityRegistry.MANUAL_CRANK_TYPE);
-        this.suppliedPerCrank = suppliedPerCrank;
-    }
-
-	@Override
-	public void fromTag(BlockState state, CompoundTag tag) {
-		super.fromTag(state, tag);
-		suppliedPerCrank = tag.getInt("WindupTicks");
-	}
-
-	@Override
-	public CompoundTag toTag(CompoundTag tag) {
-		CompoundTag result = super.toTag(tag);
-		result.putInt("WindupTicks", suppliedPerCrank);
-		return result;
+		super(EntityRegistry.MANUAL_CRANK_TYPE);
 	}
 
 	public void activate() {
@@ -51,7 +29,7 @@ public class ManualCrankBlockEntity extends BlockEntity implements Tickable {
 		Receiver receiver = (Receiver) entity;
 		boolean activated = receiver.canReceive(dir.getOpposite(), MechanicalTech.PAYLOAD_ENERGY);
 		if (activated) {
-			receiver.onReceive(dir.getOpposite(), new Payload<>(suppliedPerCrank, MechanicalTech.PAYLOAD_ENERGY));
+			receiver.onReceive(dir.getOpposite(), new Payload<>(5, MechanicalTech.PAYLOAD_ENERGY));
 		}
 		if (activated) {
 			active = true;

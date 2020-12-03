@@ -26,11 +26,8 @@ public class ManualCrankBlock extends FacingBlock implements BlockEntityProvider
     public static final VoxelShape UP_SHAPE = Block.createCuboidShape(2.0D, 5.0D, 2.0D, 14.0D, 16.0D, 14.0D);
     public static final VoxelShape NORTH_SHAPE = Block.createCuboidShape(2.0D, 2.0D, 0.0D, 14.0D, 14.0D, 11.0D);
 
-    private final int suppliedPerCrank;
-
-    public ManualCrankBlock(Settings settings, int suppliedPerCrank) {
+    public ManualCrankBlock(Settings settings) {
         super(settings);
-        this.suppliedPerCrank = suppliedPerCrank;
         this.setDefaultState(this.getStateManager().getDefaultState().with(FACING, Direction.DOWN));
     }
 
@@ -89,6 +86,6 @@ public class ManualCrankBlock extends FacingBlock implements BlockEntityProvider
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockView view) {
-        return new ManualCrankBlockEntity(suppliedPerCrank);
+        return new ManualCrankBlockEntity();
     }
 }
