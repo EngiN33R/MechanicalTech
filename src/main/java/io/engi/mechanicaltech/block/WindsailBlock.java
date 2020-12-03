@@ -45,8 +45,8 @@ public class WindsailBlock extends AbstractTurbineAttachmentBlock implements Blo
 
 	@Override
 	public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos, Direction facing) {
-		int xRange = facing.getAxis() == Direction.Axis.X ? 0 : 2;
-		int zRange = facing.getAxis() == Direction.Axis.Z ? 0 : 2;
+		int xRange = facing.getAxis() == Direction.Axis.X ? 0 : 1;
+		int zRange = facing.getAxis() == Direction.Axis.Z ? 0 : 1;
 		for (BlockPos checkPos : BlockPos.iterateOutwards(pos, xRange, 2, zRange)) {
 			if (world.getBlockState(checkPos).getBlock() != Blocks.AIR) {
 				return false;
