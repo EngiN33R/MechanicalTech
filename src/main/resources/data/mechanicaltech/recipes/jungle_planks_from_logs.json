@@ -1,0 +1,11 @@
+{
+  "type": "mechanicaltech:sawing",
+  "ingredient": {
+    "tag": "minecraft:jungle_logs"
+  },
+  "result": {
+    "item": "minecraft:jungle_planks",
+    "count": 6
+  },
+  "time": 300
+}

@@ -1,0 +1,11 @@
+{
+  "type": "mechanicaltech:sawing",
+  "ingredient": {
+    "item": "minecraft:oak_planks"
+  },
+  "result": {
+    "item": "minecraft:oak_slab",
+    "count": 2
+  },
+  "time": 300
+}

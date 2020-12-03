@@ -1,0 +1,11 @@
+{
+  "type": "mechanicaltech:sawing",
+  "ingredient": {
+    "tag": "minecraft:birch_logs"
+  },
+  "result": {
+    "item": "minecraft:birch_planks",
+    "count": 6
+  },
+  "time": 300
+}
