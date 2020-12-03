@@ -68,8 +68,8 @@ public class ManualCrankBlockEntity extends BlockEntity implements Tickable {
         if (active) {
             ticksActive++;
         }
-        if (ticksActive >= 16) {
-            rotation = rotation < 180 ? 180 : 0;
+        if (ticksActive >= 32) {
+            rotation = 0;
             ticksActive = 0;
             active = false;
         }
@@ -77,8 +77,7 @@ public class ManualCrankBlockEntity extends BlockEntity implements Tickable {
 
     public float getRotation(float tickDelta) {
         if (active) {
-            float base = rotation < 180 ? 0 : 180;
-            rotation = base + (ticksActive + tickDelta) / 16 * 180F;
+            rotation = (ticksActive + tickDelta) / 32 * 360F;
         }
         return rotation;
     }

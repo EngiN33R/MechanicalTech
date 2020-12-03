@@ -22,7 +22,9 @@ import javax.annotation.Nullable;
 
 @SuppressWarnings("deprecation")
 public class ManualCrankBlock extends FacingBlock implements BlockEntityProvider {
-    public static final VoxelShape DEFAULT_SHAPE = Block.createCuboidShape(3.0D, 0.0D, 7.0D, 13.0D, 8.0D, 9.0D);
+    public static final VoxelShape DOWN_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 11.0D, 14.0D);
+    public static final VoxelShape UP_SHAPE = Block.createCuboidShape(2.0D, 5.0D, 2.0D, 14.0D, 16.0D, 14.0D);
+    public static final VoxelShape NORTH_SHAPE = Block.createCuboidShape(2.0D, 2.0D, 0.0D, 14.0D, 14.0D, 11.0D);
 
     private final int suppliedPerCrank;
 
@@ -74,7 +76,14 @@ public class ManualCrankBlock extends FacingBlock implements BlockEntityProvider
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return Utilities.rotateShape(Direction.DOWN, state.get(FACING), DEFAULT_SHAPE);
+    	switch (state.get(FACING)) {
+			case DOWN:
+				return DOWN_SHAPE;
+			case UP:
+				return UP_SHAPE;
+			default:
+				return Utilities.rotateShape(Direction.NORTH, state.get(FACING), NORTH_SHAPE);
+		}
     }
 
     @Nullable
