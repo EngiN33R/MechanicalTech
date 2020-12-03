@@ -2,14 +2,18 @@ package io.engi.mechanicaltech.entity;
 
 import io.engi.mechanicaltech.registry.EntityRegistry;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.HorizontalFacingBlock;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.util.Tickable;
 
-public class WindsailBlockEntity extends AbstractTurbineAttachmentBlockEntity {
+public class WindsailBlockEntity extends BlockEntity implements Tickable {
 	public static final int DEFAULT_MULTIPLIER = 1;
 
 	private int multiplier;
 
 	private float rotationAngle = 0F;
+	private double storedPower;
 
 	public WindsailBlockEntity() {
 		this(DEFAULT_MULTIPLIER);
@@ -33,13 +37,8 @@ public class WindsailBlockEntity extends AbstractTurbineAttachmentBlockEntity {
 		return tag;
 	}
 
-	@Override
-	public int getEnergyPerTick() {
-		return (int) Math.round(2 * multiplier * getRotationMultiplier());
-	}
-
 	public double getRotationMultiplier() {
-		double base = Math.cbrt(getPos().getY() - 74) / 10 + 1;
+		double base = Math.cbrt(getPos().getY() - 80) / 10 + 1;
 		if (world.getLevelProperties().isRaining()) {
 			base *= 1.15;
 		}
@@ -53,5 +52,23 @@ public class WindsailBlockEntity extends AbstractTurbineAttachmentBlockEntity {
 		float rotationStep = (float) getRotationMultiplier() * 3F * tickDelta;
 		rotationAngle = (rotationAngle + rotationStep) % 360;
 		return rotationAngle;
+	}
+
+	@Override
+	public void tick() {
+		if (world == null || world.isClient) return;
+
+		storedPower += getRotationMultiplier();
+		int fullPower = (int) (storedPower - (storedPower % 1));
+		if (fullPower >= 1) {
+			storedPower -= fullPower;
+
+			BlockState state = world.getBlockState(getPos());
+			BlockEntity entity = world.getBlockEntity(getPos().offset(state.get(HorizontalFacingBlock.FACING).getOpposite()));
+			if (!(entity instanceof TurbineBlockEntity)) return;
+
+			TurbineBlockEntity turbine = (TurbineBlockEntity) entity;
+			turbine.onReceiveRotorEnergy(fullPower);
+		}
 	}
 }
