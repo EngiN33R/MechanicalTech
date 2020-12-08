@@ -1,0 +1,43 @@
+{
+  "block.mechanicaltech.turbine": "Турбина",
+  "block.mechanicaltech.waterwheel": "Водяное Колесо",
+  "block.mechanicaltech.windsail": "Парусник",
+  "block.mechanicaltech.manual_crank": "Ручной Кривошип",
+
+  "block.mechanicaltech.battery_base": "Батарейная Основа",
+  "block.mechanicaltech.battery_mid": "Батарейное Ядро",
+  "block.mechanicaltech.battery_cap": "Крышка Батареи",
+
+  "block.mechanicaltech.mill": "Мельница",
+  "block.mechanicaltech.grinder": "Дробитель",
+  "block.mechanicaltech.sawmill": "Лесопилка",
+
+  "block.mechanicaltech.angled_connector_down": "Угловой Соединитель (Вниз)",
+  "block.mechanicaltech.angled_connector_right": "Угловой Соединитель (Сбоку)",
+  "block.mechanicaltech.angled_connector_up": "Угловой Соединитель (Вверх)",
+  "block.mechanicaltech.cross_connector": "Перекрестный Соединитель",
+  "block.mechanicaltech.spindle": "Шпиндель",
+
+  "item.mechanicaltech.turbine": "Турбина",
+  "item.mechanicaltech.waterwheel": "Водяное Колесо",
+  "item.mechanicaltech.windsail": "Парусник",
+  "item.mechanicaltech.manual_crank": "Ручной Кривошип",
+
+  "item.mechanicaltech.mill": "Мельница",
+  "item.mechanicaltech.grinder": "Дробитель",
+  "item.mechanicaltech.sawmill": "Лесопилка",
+
+  "item.mechanicaltech.angled_connector_down": "Угловой Соединитель (Вниз)",
+  "item.mechanicaltech.angled_connector_right": "Угловой Соединитель (Сбоку)",
+  "item.mechanicaltech.angled_connector_up": "Угловой Соединитель (Вверх)",
+  "item.mechanicaltech.cross_connector": "Cross Connector",
+  "item.mechanicaltech.spindle": "Шпиндель",
+
+  "item.mechanicaltech.wood_gear": "Деревянная Шестерня",
+  "item.mechanicaltech.flour": "Мука",
+  "item.mechanicaltech.starch": "Крахмал",
+  "item.mechanicaltech.iron_grit": "Железный Песок",
+  "item.mechanicaltech.gold_grit": "Золотой Песок",
+
+  "itemGroup.mechanicaltech.items": "Mechanical Tech"
+}
