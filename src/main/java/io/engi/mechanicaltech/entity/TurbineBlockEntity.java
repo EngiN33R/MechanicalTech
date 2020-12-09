@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableSet;
 import io.engi.dynamo.api.Payload;
 import io.engi.dynamo.impl.AbstractSupplierBlockEntity;
 import io.engi.mechanicaltech.registry.EntityRegistry;
+import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.nbt.CompoundTag;
@@ -15,7 +16,7 @@ import java.util.Set;
 
 import static io.engi.mechanicaltech.MechanicalTech.PAYLOAD_ENERGY;
 
-public class TurbineBlockEntity extends AbstractSupplierBlockEntity {
+public class TurbineBlockEntity extends AbstractSupplierBlockEntity implements BlockEntityClientSerializable {
 	public static final int DEFAULT_MULTIPLIER = 1;
 
 	private int multiplier;
@@ -32,14 +33,13 @@ public class TurbineBlockEntity extends AbstractSupplierBlockEntity {
 	@Override
 	public void fromTag(BlockState state, CompoundTag tag) {
 		super.fromTag(state, tag);
-		multiplier = tag.getInt("Multiplier");
+		fromClientTag(tag);
 	}
 
 	@Override
 	public CompoundTag toTag(CompoundTag tag) {
-		CompoundTag result = super.toTag(tag);
-		result.putInt("Multiplier", multiplier);
-		return tag;
+		super.toTag(tag);
+		return toClientTag(tag);
 	}
 
 	@Override
@@ -52,5 +52,16 @@ public class TurbineBlockEntity extends AbstractSupplierBlockEntity {
 
 	public void onReceiveRotorEnergy(int amount) {
 		supply(world.getBlockState(pos).get(HorizontalFacingBlock.FACING).getOpposite(), new Payload<>(amount, PAYLOAD_ENERGY));
+	}
+
+	@Override
+	public void fromClientTag(CompoundTag tag) {
+		multiplier = tag.getInt("Multiplier");
+	}
+
+	@Override
+	public CompoundTag toClientTag(CompoundTag tag) {
+		tag.putInt("Multiplier", multiplier);
+		return tag;
 	}
 }

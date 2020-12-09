@@ -1,13 +1,14 @@
 package io.engi.mechanicaltech.entity;
 
 import io.engi.mechanicaltech.registry.EntityRegistry;
+import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Tickable;
 
-public class WindsailBlockEntity extends BlockEntity implements Tickable {
+public class WindsailBlockEntity extends BlockEntity implements Tickable, BlockEntityClientSerializable {
 	public static final int DEFAULT_MULTIPLIER = 1;
 
 	private int multiplier;
@@ -27,14 +28,13 @@ public class WindsailBlockEntity extends BlockEntity implements Tickable {
 	@Override
 	public void fromTag(BlockState state, CompoundTag tag) {
 		super.fromTag(state, tag);
-		multiplier = tag.getInt("Multiplier");
+		fromClientTag(tag);
 	}
 
 	@Override
 	public CompoundTag toTag(CompoundTag tag) {
-		CompoundTag result = super.toTag(tag);
-		result.putInt("Multiplier", multiplier);
-		return tag;
+		super.toTag(tag);
+		return toClientTag(tag);
 	}
 
 	public double getRotationMultiplier() {
@@ -56,7 +56,7 @@ public class WindsailBlockEntity extends BlockEntity implements Tickable {
 
 	@Override
 	public void tick() {
-		if (world == null || world.isClient) return;
+		if (world == null) return;
 
 		storedPower += getRotationMultiplier();
 		int fullPower = (int) (storedPower - (storedPower % 1));
@@ -70,5 +70,16 @@ public class WindsailBlockEntity extends BlockEntity implements Tickable {
 			TurbineBlockEntity turbine = (TurbineBlockEntity) entity;
 			turbine.onReceiveRotorEnergy(fullPower);
 		}
+	}
+
+	@Override
+	public void fromClientTag(CompoundTag tag) {
+		multiplier = tag.getInt("Multiplier");
+	}
+
+	@Override
+	public CompoundTag toClientTag(CompoundTag tag) {
+		tag.putInt("Multiplier", multiplier);
+		return tag;
 	}
 }

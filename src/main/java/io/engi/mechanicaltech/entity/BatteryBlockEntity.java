@@ -6,6 +6,7 @@ import io.engi.dynamo.impl.AbstractSupplierBlockEntity;
 import io.engi.mechanicaltech.block.AbstractBatteryMultipart;
 import io.engi.mechanicaltech.registry.BlockRegistry;
 import io.engi.mechanicaltech.registry.EntityRegistry;
+import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.nbt.CompoundTag;
@@ -18,7 +19,8 @@ import java.util.Set;
 
 import static io.engi.mechanicaltech.MechanicalTech.PAYLOAD_ENERGY;
 
-public class BatteryBlockEntity extends AbstractSupplierBlockEntity implements Receiver, Tickable {
+public class BatteryBlockEntity extends AbstractSupplierBlockEntity implements Receiver, Tickable,
+																			   BlockEntityClientSerializable {
 	private int batteryHeight;
 	private int pumpedPower;
 	private int dumpingPower;
@@ -140,14 +142,24 @@ public class BatteryBlockEntity extends AbstractSupplierBlockEntity implements R
 	@Override
 	public void fromTag(BlockState state, CompoundTag tag) {
 		super.fromTag(state, tag);
+		fromClientTag(tag);
+	}
+
+	@Override
+	public CompoundTag toTag(CompoundTag tag) {
+		super.toTag(tag);
+		return toClientTag(tag);
+	}
+
+	@Override
+	public void fromClientTag(CompoundTag tag) {
 		batteryHeight = tag.getShort("Height");
 		pumpedPower = tag.getShort("Pumped");
 		dumpingPower = tag.getShort("Dumping");
 	}
 
 	@Override
-	public CompoundTag toTag(CompoundTag tag) {
-		super.toTag(tag);
+	public CompoundTag toClientTag(CompoundTag tag) {
 		tag.putShort("Height", (short) batteryHeight);
 		tag.putShort("Pumped", (short) pumpedPower);
 		tag.putShort("Dumping", (short) dumpingPower);

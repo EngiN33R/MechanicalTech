@@ -1,6 +1,7 @@
 package io.engi.mechanicaltech.entity;
 
 import io.engi.mechanicaltech.registry.EntityRegistry;
+import net.fabricmc.fabric.api.block.entity.BlockEntityClientSerializable;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.nbt.CompoundTag;
@@ -8,7 +9,7 @@ import net.minecraft.tag.FluidTags;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 
-public class WatermillBlockEntity extends AbstractTurbineAttachmentBlockEntity {
+public class WatermillBlockEntity extends AbstractTurbineAttachmentBlockEntity implements BlockEntityClientSerializable {
 	public static final int DEFAULT_MULTIPLIER = 1;
 
 	private int multiplier;
@@ -27,14 +28,13 @@ public class WatermillBlockEntity extends AbstractTurbineAttachmentBlockEntity {
 	@Override
 	public void fromTag(BlockState state, CompoundTag tag) {
 		super.fromTag(state, tag);
-		multiplier = tag.getInt("Multiplier");
+		fromClientTag(tag);
 	}
 
 	@Override
 	public CompoundTag toTag(CompoundTag tag) {
-		CompoundTag result = super.toTag(tag);
-		result.putInt("Multiplier", multiplier);
-		return tag;
+		super.toTag(tag);
+		return toClientTag(tag);
 	}
 
 	@Override
@@ -61,5 +61,16 @@ public class WatermillBlockEntity extends AbstractTurbineAttachmentBlockEntity {
 		float rotationStep = (float) getFlowMultiplier() * 3F * tickDelta;
 		rotationAngle = (rotationAngle + rotationStep) % 360;
 		return rotationAngle;
+	}
+
+	@Override
+	public void fromClientTag(CompoundTag tag) {
+		multiplier = tag.getInt("Multiplier");
+	}
+
+	@Override
+	public CompoundTag toClientTag(CompoundTag tag) {
+		tag.putInt("Multiplier", multiplier);
+		return tag;
 	}
 }
