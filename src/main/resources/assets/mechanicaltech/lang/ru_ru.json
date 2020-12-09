@@ -1,36 +1,36 @@
 {
   "block.mechanicaltech.turbine": "Турбина",
   "block.mechanicaltech.waterwheel": "Водяное Колесо",
-  "block.mechanicaltech.windsail": "Парусник",
+  "block.mechanicaltech.windsail": "Ветряная Мельница",
   "block.mechanicaltech.manual_crank": "Ручной Кривошип",
 
-  "block.mechanicaltech.battery_base": "Батарейная Основа",
-  "block.mechanicaltech.battery_mid": "Батарейное Ядро",
+  "block.mechanicaltech.battery_base": "База Батареи",
+  "block.mechanicaltech.battery_mid": "Основа Батареи",
   "block.mechanicaltech.battery_cap": "Крышка Батареи",
 
   "block.mechanicaltech.mill": "Мельница",
   "block.mechanicaltech.grinder": "Дробитель",
   "block.mechanicaltech.sawmill": "Лесопилка",
 
-  "block.mechanicaltech.angled_connector_down": "Угловой Соединитель (Вниз)",
-  "block.mechanicaltech.angled_connector_right": "Угловой Соединитель (Сбоку)",
-  "block.mechanicaltech.angled_connector_up": "Угловой Соединитель (Вверх)",
-  "block.mechanicaltech.cross_connector": "Перекрестный Соединитель",
+  "block.mechanicaltech.angled_connector_down": "Нижний Соединитель",
+  "block.mechanicaltech.angled_connector_right": "Боковой Соединитель",
+  "block.mechanicaltech.angled_connector_up": "Верхний Соединитель",
+  "block.mechanicaltech.cross_connector": "Верхний Соединитель",
   "block.mechanicaltech.spindle": "Шпиндель",
 
   "item.mechanicaltech.turbine": "Турбина",
   "item.mechanicaltech.waterwheel": "Водяное Колесо",
-  "item.mechanicaltech.windsail": "Парусник",
+  "item.mechanicaltech.windsail": "Ветряная Мельница",
   "item.mechanicaltech.manual_crank": "Ручной Кривошип",
 
   "item.mechanicaltech.mill": "Мельница",
   "item.mechanicaltech.grinder": "Дробитель",
   "item.mechanicaltech.sawmill": "Лесопилка",
 
-  "item.mechanicaltech.angled_connector_down": "Угловой Соединитель (Вниз)",
-  "item.mechanicaltech.angled_connector_right": "Угловой Соединитель (Сбоку)",
-  "item.mechanicaltech.angled_connector_up": "Угловой Соединитель (Вверх)",
-  "item.mechanicaltech.cross_connector": "Cross Connector",
+  "item.mechanicaltech.angled_connector_down": "Нижний Соединитель",
+  "item.mechanicaltech.angled_connector_right": "Боковой Соединитель",
+  "item.mechanicaltech.angled_connector_up": "Верхний Соединитель",
+  "item.mechanicaltech.cross_connector": "Верхний Соединитель",
   "item.mechanicaltech.spindle": "Шпиндель",
 
   "item.mechanicaltech.wood_gear": "Деревянная Шестерня",
