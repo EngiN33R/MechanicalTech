@@ -25,7 +25,7 @@ import java.util.Set;
 import static io.engi.mechanicaltech.MechanicalTech.PAYLOAD_ENERGY;
 
 public class GrinderBlockEntity extends AbstractDirectProcessorBlockEntity {
-	private static final int[] FRONT_SLOTS = new int[]{1};
+	private static final int[] BOTTOM_SLOTS = new int[]{1};
 	private static final int[] SIDE_SLOTS = new int[]{0};
 
 	public GrinderBlockEntity() {
@@ -83,8 +83,8 @@ public class GrinderBlockEntity extends AbstractDirectProcessorBlockEntity {
 
 	@Override
 	public int[] getAvailableSlots(Direction side) {
-		if (side == getFront()) {
-			return FRONT_SLOTS;
+		if (side == Direction.DOWN) {
+			return BOTTOM_SLOTS;
 		} else {
 			return SIDE_SLOTS;
 		}
