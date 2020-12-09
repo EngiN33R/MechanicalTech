@@ -67,10 +67,10 @@ public abstract class AbstractDirectProcessorBlockEntity extends AbstractProcess
 					return true;
 				} else if (!output.isItemEqualIgnoreDamage(recipeOutput)) {
 					return false;
-				} else if (output.getCount() < getMaxCountPerStack() && output.getCount() < output.getMaxCount()) {
+				} else if (output.getCount() <= getMaxCountPerStack() - recipeOutput.getCount() && output.getCount() <= output.getMaxCount() - recipeOutput.getCount()) {
 					return true;
 				} else {
-					return output.getCount() < recipeOutput.getMaxCount();
+					return output.getCount() <= recipeOutput.getMaxCount() - recipeOutput.getCount();
 				}
 			}
 		} else {
@@ -86,7 +86,7 @@ public abstract class AbstractDirectProcessorBlockEntity extends AbstractProcess
 			if (output.isEmpty()) {
 				inventory.set(1, recipeOutput.copy());
 			} else if (output.getItem() == recipeOutput.getItem()) {
-				output.increment(1);
+				output.increment(recipeOutput.getCount());
 			}
 
 			input.decrement(1);
