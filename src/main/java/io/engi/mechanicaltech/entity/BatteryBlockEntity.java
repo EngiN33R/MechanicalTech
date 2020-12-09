@@ -43,7 +43,7 @@ public class BatteryBlockEntity extends AbstractSupplierBlockEntity implements R
 
 	@Override
 	public boolean onReceive(Direction direction, Payload<?> payload) {
-		if (world == null || world.isClient || batteryHeight == 0) return false;
+		if (world == null || batteryHeight == 0) return false;
 		int input = ((Payload<Integer>) payload).getPayload();
 		pumpedPower = MathHelper.clamp(pumpedPower + input, 0, batteryHeight * 20);
 
@@ -116,7 +116,7 @@ public class BatteryBlockEntity extends AbstractSupplierBlockEntity implements R
 
 	@Override
 	public void tick() {
-		if (world == null || world.isClient) return;
+		if (world == null) return;
 
 		BlockPos topPos = pos.offset(Direction.UP, batteryHeight);
 		boolean isDumping = !world.isReceivingRedstonePower(topPos);

@@ -15,7 +15,7 @@ public abstract class AbstractTurbineAttachmentBlockEntity extends BlockEntity i
 
 	@Override
 	public void tick() {
-		if (world == null || world.isClient) return;
+		if (world == null) return;
 
 		BlockState state = world.getBlockState(getPos());
 		BlockEntity entity = world.getBlockEntity(getPos().offset(state.get(HorizontalFacingBlock.FACING).getOpposite()));

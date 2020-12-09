@@ -1,17 +1,20 @@
 package io.engi.mechanicaltech.block;
 
-import io.engi.dynamo.api.Connectable;
-import io.engi.dynamo.api.Connector;
+import io.engi.dynamo.api.*;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.*;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.Random;
 import java.util.Set;
 
 public class OrientableConnectorBlock extends FacingBlock implements Connector {
@@ -110,5 +113,19 @@ public class OrientableConnectorBlock extends FacingBlock implements Connector {
 	@Override
 	public Direction getNextDirection(BlockView world, BlockPos pos, Direction inbound, Identifier type) {
 		return inbound.getOpposite();
+	}
+
+	@Override
+	public boolean transmit(BlockView world, BlockPos pos, Direction inbound, Payload<?> payload) {
+		if (world instanceof World && ((World) world).isClient) {
+			Random random = ((World) world).getRandom();
+			if (random.nextInt(2) == 0) {
+				double d = pos.getX() + random.nextFloat();
+				double e = pos.getY() + random.nextFloat();
+				double f = pos.getZ() + random.nextFloat();
+				((World) world).addParticle(ParticleTypes.SMOKE, d, e, f, 0.0D, -0.035D, 0.0D);
+			}
+		}
+		return Connector.super.transmit(world, pos, inbound, payload);
 	}
 }
