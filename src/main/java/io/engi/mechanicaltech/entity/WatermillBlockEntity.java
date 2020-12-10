@@ -9,7 +9,7 @@ import net.minecraft.tag.FluidTags;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 
-public class WatermillBlockEntity extends AbstractTurbineAttachmentBlockEntity implements BlockEntityClientSerializable {
+public class WatermillBlockEntity extends AbstractTurbineAttachmentBlockEntity implements BlockEntityClientSerializable, RotatableEntity {
 	public static final int DEFAULT_MULTIPLIER = 1;
 
 	private int multiplier;
@@ -57,6 +57,7 @@ public class WatermillBlockEntity extends AbstractTurbineAttachmentBlockEntity i
 		return base < 0 ? 0 : base;
 	}
 
+	@Override
 	public float getRotation(float tickDelta) {
 		float rotationStep = (float) getFlowMultiplier() * 3F * tickDelta;
 		rotationAngle = (rotationAngle + rotationStep) % 360;

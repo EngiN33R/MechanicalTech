@@ -8,7 +8,7 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Tickable;
 
-public class WindsailBlockEntity extends BlockEntity implements Tickable, BlockEntityClientSerializable {
+public class WindsailBlockEntity extends BlockEntity implements Tickable, BlockEntityClientSerializable, RotatableEntity {
 	public static final int DEFAULT_MULTIPLIER = 1;
 
 	private int multiplier;
@@ -48,6 +48,7 @@ public class WindsailBlockEntity extends BlockEntity implements Tickable, BlockE
 		return Math.min(Math.max(base, 0.5), 2);
 	}
 
+	@Override
 	public float getRotation(float tickDelta) {
 		float rotationStep = (float) getRotationMultiplier() * 3F * tickDelta;
 		rotationAngle = (rotationAngle + rotationStep) % 360;

@@ -10,7 +10,7 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.util.Tickable;
 import net.minecraft.util.math.Direction;
 
-public class ManualCrankBlockEntity extends BlockEntity implements Tickable {
+public class ManualCrankBlockEntity extends BlockEntity implements Tickable, RotatableEntity {
     private boolean active;
     private float rotation;
     private int ticksActive;
@@ -53,6 +53,7 @@ public class ManualCrankBlockEntity extends BlockEntity implements Tickable {
         }
     }
 
+    @Override
     public float getRotation(float tickDelta) {
         if (active) {
             rotation = (ticksActive + tickDelta) / 32 * 360F;
