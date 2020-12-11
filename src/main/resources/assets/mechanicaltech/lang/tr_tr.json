@@ -1,0 +1,43 @@
+{
+  "block.mechanicaltech.turbine": "Türbin",
+  "block.mechanicaltech.waterwheel": "Su çarkı",
+  "block.mechanicaltech.windsail": "Yelkenli",
+  "block.mechanicaltech.manual_crank": "Manual çark",
+
+  "block.mechanicaltech.battery_base": "Ana batarya",
+  "block.mechanicaltech.battery_mid": "Batarya çekirdeği",
+  "block.mechanicaltech.battery_cap": "Batarya limiti",
+
+  "block.mechanicaltech.mill": "Değirmen",
+  "block.mechanicaltech.grinder": "Öğütücü",
+  "block.mechanicaltech.sawmill":Keresete fabrikası",
+
+  "block.mechanicaltech.angled_connector_down": "Ayarlanmış birleştirici  (Aşağı)",
+  "block.mechanicaltech.angled_connector_right": "Ayarlanmış birleştirici  (Yan)",
+  "block.mechanicaltech.angled_connector_up": "Ayarlanmış birleştirici (Yukarı)",
+  "block.mechanicaltech.cross_connector": "Çapraz birleştirici",
+  "block.mechanicaltech.spindle": "Dingil",
+
+  "item.mechanicaltech.turbine": "Türbin",
+  "item.mechanicaltech.waterwheel": "Su çarkı",
+  "item.mechanicaltech.windsail": "Yelkenli",
+  "item.mechanicaltech.manual_crank": "Manual Crank",
+
+  "item.mechanicaltech.mill": "Değirmen",
+  "item.mechanicaltech.grinder": "Öğütücü",
+  "item.mechanicaltech.sawmill": "Kereste fabrikası",
+
+  "item.mechanicaltech.angled_connector_down": "Ayarlanmış birleştirici   (Aşağı
+  "item.mechanicaltech.angled_connector_right": "Ayarlanmış birleştirici  (Yan)",
+  "item.mechanicaltech.angled_connector_up": "Ayarlanmış birleştirici   (Yukarı
+  "item.mechanicaltech.cross_connector": "Çapraz birleştirici",
+  "item.mechanicaltech.spindle: "Dingil",
+
+  "item.mechanicaltech.wood_gear": "Tahta Dişli",
+  "item.mechanicaltech.flour": "Un",
+  "item.mechanicaltech.starch": "Nişasta",
+  "item.mechanicaltech.iron_grit": "Demir kumtaşı",
+  "item.mechanicaltech.gold_grit": "Altın kumtaşı ",
+
+  "itemGroup.mechanicaltech.items": "Mekanik teknoloji"
+}
