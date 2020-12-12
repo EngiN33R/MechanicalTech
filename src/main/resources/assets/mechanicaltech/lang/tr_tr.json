@@ -10,7 +10,7 @@
 
   "block.mechanicaltech.mill": "Değirmen",
   "block.mechanicaltech.grinder": "Öğütücü",
-  "block.mechanicaltech.sawmill":Keresete fabrikası",
+  "block.mechanicaltech.sawmill": "Keresete fabrikası",
 
   "block.mechanicaltech.angled_connector_down": "Ayarlanmış birleştirici  (Aşağı)",
   "block.mechanicaltech.angled_connector_right": "Ayarlanmış birleştirici  (Yan)",
@@ -27,17 +27,17 @@
   "item.mechanicaltech.grinder": "Öğütücü",
   "item.mechanicaltech.sawmill": "Kereste fabrikası",
 
-  "item.mechanicaltech.angled_connector_down": "Ayarlanmış birleştirici   (Aşağı
+  "item.mechanicaltech.angled_connector_down": "Ayarlanmış birleştirici   (Aşağı)",
   "item.mechanicaltech.angled_connector_right": "Ayarlanmış birleştirici  (Yan)",
-  "item.mechanicaltech.angled_connector_up": "Ayarlanmış birleştirici   (Yukarı
+  "item.mechanicaltech.angled_connector_up": "Ayarlanmış birleştirici   (Yukarı)",
   "item.mechanicaltech.cross_connector": "Çapraz birleştirici",
-  "item.mechanicaltech.spindle: "Dingil",
+  "item.mechanicaltech.spindle": "Dingil",
 
-  "item.mechanicaltech.wood_gear": "Tahta Dişli",
+  "item.mechanicaltech.wood_gear": "Tahta dişli",
   "item.mechanicaltech.flour": "Un",
   "item.mechanicaltech.starch": "Nişasta",
   "item.mechanicaltech.iron_grit": "Demir kumtaşı",
-  "item.mechanicaltech.gold_grit": "Altın kumtaşı ",
+  "item.mechanicaltech.gold_grit": "Altın kumtaşı",
 
   "itemGroup.mechanicaltech.items": "Mekanik teknoloji"
 }
