@@ -1,0 +1,43 @@
+{
+  "block.mechanicaltech.turbine": "涡轮机",
+  "block.mechanicaltech.waterwheel": "水车",
+  "block.mechanicaltech.windsail": "风车翼",
+  "block.mechanicaltech.manual_crank": "手动曲柄",
+
+  "block.mechanicaltech.battery_base": "电池底座",
+  "block.mechanicaltech.battery_mid": "电池核心",
+  "block.mechanicaltech.battery_cap": "电池盖",
+
+  "block.mechanicaltech.mill": "磨粉机",
+  "block.mechanicaltech.grinder": "研磨机",
+  "block.mechanicaltech.sawmill": "锯木机",
+
+  "block.mechanicaltech.angled_connector_down": "斜角连接器（下）",
+  "block.mechanicaltech.angled_connector_right": "斜角连接器（侧）",
+  "block.mechanicaltech.angled_connector_up": "斜角连接器（上）",
+  "block.mechanicaltech.cross_connector": "十字连接器",
+  "block.mechanicaltech.spindle": "轴",
+
+  "item.mechanicaltech.turbine": "涡轮机",
+  "item.mechanicaltech.waterwheel": "水车",
+  "item.mechanicaltech.windsail": "风车翼",
+  "item.mechanicaltech.manual_crank": "手动曲柄",
+
+  "item.mechanicaltech.mill": "磨粉机",
+  "item.mechanicaltech.grinder": "研磨机",
+  "item.mechanicaltech.sawmill": "锯木机",
+
+  "item.mechanicaltech.angled_connector_down": "斜角连接器（下）",
+  "item.mechanicaltech.angled_connector_right": "斜角连接器（侧）",
+  "item.mechanicaltech.angled_connector_up": "斜角连接器（上）",
+  "item.mechanicaltech.cross_connector": "十字连接器",
+  "item.mechanicaltech.spindle": "轴",
+
+  "item.mechanicaltech.wood_gear": "木制齿轮",
+  "item.mechanicaltech.flour": "面粉",
+  "item.mechanicaltech.starch": "淀粉",
+  "item.mechanicaltech.iron_grit": "铁砂",
+  "item.mechanicaltech.gold_grit": "金砂",
+
+  "itemGroup.mechanicaltech.items": "机械科技"
+}
