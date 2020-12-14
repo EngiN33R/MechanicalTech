@@ -29,6 +29,9 @@ public class EntityRegistry {
 	public static final BlockEntityType<SawmillBlockEntity> SAWMILL_TYPE = BlockEntityType.Builder.create(
 		SawmillBlockEntity::new, BlockRegistry.SAWMILL).build(null);
 
+	public static final BlockEntityType<ItemChuteBlockEntity> ITEM_CHUTE_TYPE = BlockEntityType.Builder.create(
+		ItemChuteBlockEntity::new, BlockRegistry.ITEM_CHUTE).build(null);
+
 	public static void initialize() {
 		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "manual_crank"), MANUAL_CRANK_TYPE);
 		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "turbine"), TURBINE_TYPE);
@@ -40,11 +43,14 @@ public class EntityRegistry {
 		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "mill"), MILL_TYPE);
 		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "grinder"), GRINDER_TYPE);
 		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "sawmill"), SAWMILL_TYPE);
+
+		Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(MODID, "item_chute"), ITEM_CHUTE_TYPE);
 	}
 
 	public static void initializeClient() {
 		BlockEntityRendererRegistry.INSTANCE.register(MANUAL_CRANK_TYPE, ManualCrankBlockEntityRenderer::new);
 		BlockEntityRendererRegistry.INSTANCE.register(WINDSAIL_TYPE, WindsailBlockEntityRenderer::new);
 		BlockEntityRendererRegistry.INSTANCE.register(WATERWHEEL_TYPE, WatermillBlockEntityRenderer::new);
+		BlockEntityRendererRegistry.INSTANCE.register(ITEM_CHUTE_TYPE, ItemChuteBlockEntityRenderer::new);
 	}
 }

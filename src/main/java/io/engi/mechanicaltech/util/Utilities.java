@@ -1,6 +1,9 @@
 package io.engi.mechanicaltech.util;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.HorizontalFacingBlock;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.client.util.math.Vector3f;
 import net.minecraft.util.math.*;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
@@ -22,6 +25,13 @@ public class Utilities {
 		}
 
 		return buffer[0];
+	}
+
+	public static void rotate(MatrixStack matrices, Direction from, Direction to) {
+		int times = (to.getHorizontal() - from.getHorizontal() + 4) % 4;
+		for (int i = 0; i < times; i++) {
+			matrices.multiply(Vector3f.POSITIVE_Y.getDegreesQuaternion(90 * times));
+		}
 	}
 
 	public static boolean isFlowingInto(BlockView world, BlockPos pos, Direction withFlowDirection) {

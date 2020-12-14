@@ -1,0 +1,32 @@
+{
+  "variants": {
+    "facing=north,variant=flat": { "model": "mechanicaltech:block/item_chute_flat" },
+    "facing=south,variant=flat": { "model": "mechanicaltech:block/item_chute_flat", "y": 180 },
+    "facing=west,variant=flat": { "model": "mechanicaltech:block/item_chute_flat", "y": 270 },
+    "facing=east,variant=flat": { "model": "mechanicaltech:block/item_chute_flat", "y": 90 },
+    "facing=north,variant=raised": { "model": "mechanicaltech:block/item_chute_raised" },
+    "facing=south,variant=raised": { "model": "mechanicaltech:block/item_chute_raised", "y": 180 },
+    "facing=west,variant=raised": { "model": "mechanicaltech:block/item_chute_raised", "y": 270 },
+    "facing=east,variant=raised": { "model": "mechanicaltech:block/item_chute_raised", "y": 90 },
+    "facing=north,variant=vertical": { "model": "mechanicaltech:block/item_chute_vertical" },
+    "facing=south,variant=vertical": { "model": "mechanicaltech:block/item_chute_vertical", "y": 180 },
+    "facing=west,variant=vertical": { "model": "mechanicaltech:block/item_chute_vertical", "y": 270 },
+    "facing=east,variant=vertical": { "model": "mechanicaltech:block/item_chute_vertical", "y": 90 },
+    "facing=north,variant=raised_to_vertical": { "model": "mechanicaltech:block/item_chute_raised_to_vertical" },
+    "facing=south,variant=raised_to_vertical": { "model": "mechanicaltech:block/item_chute_raised_to_vertical", "y": 180 },
+    "facing=west,variant=raised_to_vertical": { "model": "mechanicaltech:block/item_chute_raised_to_vertical", "y": 270 },
+    "facing=east,variant=raised_to_vertical": { "model": "mechanicaltech:block/item_chute_raised_to_vertical", "y": 90 },
+    "facing=north,variant=vertical_to_raised": { "model": "mechanicaltech:block/item_chute_vertical_to_raised" },
+    "facing=south,variant=vertical_to_raised": { "model": "mechanicaltech:block/item_chute_vertical_to_raised", "y": 180 },
+    "facing=west,variant=vertical_to_raised": { "model": "mechanicaltech:block/item_chute_vertical_to_raised", "y": 270 },
+    "facing=east,variant=vertical_to_raised": { "model": "mechanicaltech:block/item_chute_vertical_to_raised", "y": 90 },
+    "facing=north,variant=corner_nw": { "model": "mechanicaltech:block/item_chute_corner_nw" },
+    "facing=south,variant=corner_nw": { "model": "mechanicaltech:block/item_chute_corner_nw", "y": 180 },
+    "facing=west,variant=corner_nw": { "model": "mechanicaltech:block/item_chute_corner_nw", "y": 270 },
+    "facing=east,variant=corner_nw": { "model": "mechanicaltech:block/item_chute_corner_nw", "y": 90 },
+    "facing=north,variant=corner_ne": { "model": "mechanicaltech:block/item_chute_corner_ne" },
+    "facing=south,variant=corner_ne": { "model": "mechanicaltech:block/item_chute_corner_ne", "y": 180 },
+    "facing=west,variant=corner_ne": { "model": "mechanicaltech:block/item_chute_corner_ne", "y": 270 },
+    "facing=east,variant=corner_ne": { "model": "mechanicaltech:block/item_chute_corner_ne", "y": 90 }
+  }
+}

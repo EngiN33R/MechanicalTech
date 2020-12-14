@@ -47,6 +47,9 @@ public class ItemRegistry {
 	public static final BlockItem SPINDLE = new BlockItem(BlockRegistry.SPINDLE,
 														  new Item.Settings().group(ITEM_GROUP));
 
+	public static final BlockItem ITEM_CHUTE = new BlockItem(BlockRegistry.ITEM_CHUTE,
+														  new Item.Settings().group(ITEM_GROUP));
+
 	public static final Item WOOD_GEAR = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 
 	public static final Item FLOUR = new Item(new Item.Settings().group(ItemGroup.FOOD));
@@ -74,6 +77,8 @@ public class ItemRegistry {
 		Registry.register(Registry.ITEM, new Identifier(MODID, "angled_connector_down"), ANGLED_CONNECTOR_DOWN);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "angled_connector_up"), ANGLED_CONNECTOR_UP);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "spindle"), SPINDLE);
+
+		Registry.register(Registry.ITEM, new Identifier(MODID, "item_chute"), ITEM_CHUTE);
 
 		Registry.register(Registry.ITEM, new Identifier(MODID, "wood_gear"), WOOD_GEAR);
 		Registry.register(Registry.ITEM, new Identifier(MODID, "flour"), FLOUR);

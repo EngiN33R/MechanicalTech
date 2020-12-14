@@ -48,6 +48,9 @@ public class BlockRegistry {
 	);
 	public static Block SPINDLE = new SpindleBlock(Block.Settings.copy(Blocks.COBBLESTONE_WALL));
 
+	// CHUTES
+	public static ItemChuteBlock ITEM_CHUTE = new ItemChuteBlock(AbstractBlock.Settings.copy(Blocks.OAK_FENCE));
+
 	public static void initialize() {
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "turbine"), TURBINE);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "windsail"), WINDSAIL);
@@ -67,6 +70,8 @@ public class BlockRegistry {
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_up"), ANGLED_CONNECTOR_UP);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_down"), ANGLED_CONNECTOR_DOWN);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "spindle"), SPINDLE);
+
+		Registry.register(Registry.BLOCK, new Identifier(MODID, "item_chute"), ITEM_CHUTE);
 	}
 
 	public static void initializeClient() {
