@@ -14,25 +14,18 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class GrinderBlock extends HorizontalOrientableBlock implements BlockEntityProvider {
+public class GrinderBlock extends AbstractMachineBlock {
 	public GrinderBlock(Settings settings) {
 		super(settings);
 	}
 
 	@Override
-	public @Nullable BlockEntity createBlockEntity(BlockView world) {
-		return new GrinderBlockEntity();
+	protected Class<? extends BlockEntity> getBlockEntityClass() {
+		return GrinderBlockEntity.class;
 	}
 
-	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-		if (world.isClient) {
-			return ActionResult.SUCCESS;
-		} else {
-			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if (blockEntity instanceof GrinderBlockEntity) {
-				player.openHandledScreen((NamedScreenHandlerFactory)blockEntity);
-			}
-			return ActionResult.CONSUME;
-		}
+	@Override
+	public @Nullable BlockEntity createBlockEntity(BlockView world) {
+		return new GrinderBlockEntity();
 	}
 }

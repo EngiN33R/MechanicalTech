@@ -67,6 +67,8 @@ public class BlockRegistry {
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_up"), ANGLED_CONNECTOR_UP);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "angled_connector_down"), ANGLED_CONNECTOR_DOWN);
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "spindle"), SPINDLE);
+
+
 	}
 
 	public static void initializeClient() {
