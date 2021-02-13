@@ -1,0 +1,11 @@
+{
+  "type": "mechanicaltech:grinding",
+  "ingredient": {
+    "item": "minecraft:cobblestone"
+  },
+  "result": {
+    "item": "minecraft:gravel",
+    "count": 1
+  },
+  "time": 200
+}
