@@ -32,14 +32,16 @@ dependencies {
     // You may need to force-disable transitiveness on them.
     compileOnly "com.google.code.findbugs:jsr305:3.0.2"
 
-    modImplementation "io.engi.fabricmc:engilib:1.0.0+1.16"
-    include "io.engi.fabricmc:engilib:1.0.0+1.16"
+    modImplementation "io.engi.fabricmc:engilib:${project.engilib_version}"
+    include "io.engi.fabricmc:engilib:${project.engilib_version}"
 
-    modImplementation "io.engi.fabricmc:dynamo-api:1.0.0+1.16"
-    include "io.engi.fabricmc:dynamo-api:1.0.0+1.16"
+    modImplementation "io.engi.fabricmc:dynamo-api:${project.dynamoapi_version}"
+    include "io.engi.fabricmc:dynamo-api:${project.dynamoapi_version}"
 
-    modImplementation "io.github.cottonmc:LibGui:3.3.3+1.16.5"
-    include "io.github.cottonmc:LibGui:3.3.3+1.16.5"
+    modImplementation "io.github.cottonmc:LibGui:${project.libgui_version}"
+    include "io.github.cottonmc:LibGui:${project.libgui_version}"
+
+    modCompile "me.shedaniel:RoughlyEnoughItems:${project.rei_version}"
 }
 
 processResources {
