@@ -44,12 +44,14 @@ public abstract class SpinningBlockEntityRenderer<T extends BlockEntity & Rotata
 		BlockPos blockPos = entity.getPos();
 		BlockState blockState = entity.getWorld().getBlockState(blockPos);
 
-		matrices.push();
-		Vec3d pivot = getPivot();
-		matrices.translate(pivot.x, pivot.y, pivot.z);
-		matrices.multiply(getRotationAxis(blockState).getDegreesQuaternion(entity.getRotation(tickDelta)));
-		matrices.translate(-pivot.x, -pivot.y, -pivot.z);
-		renderModel(entity, matrices, vertexConsumers, blockState, overlay);
-		matrices.pop();
+		if (!blockState.isAir()) {
+			matrices.push();
+			Vec3d pivot = getPivot();
+			matrices.translate(pivot.x, pivot.y, pivot.z);
+			matrices.multiply(getRotationAxis(blockState).getDegreesQuaternion(entity.getRotation(tickDelta)));
+			matrices.translate(-pivot.x, -pivot.y, -pivot.z);
+			renderModel(entity, matrices, vertexConsumers, blockState, overlay);
+			matrices.pop();
+		}
 	}
 }
