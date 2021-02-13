@@ -19,17 +19,6 @@ repositories {
     }
 }
 
-sourceSets {
-    main {
-        java.srcDirs = ['src/main/java' ]
-        resources.srcDirs = ['src/main/resources/']
-    }
-    api {
-        java.srcDirs = ['src/api/java' ]
-        resources.srcDirs = ['src/api/resources/']
-    }
-}
-
 dependencies {
     //to change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -43,14 +32,14 @@ dependencies {
     // You may need to force-disable transitiveness on them.
     compileOnly "com.google.code.findbugs:jsr305:3.0.2"
 
-    modImplementation "io.engi.fabricmc:engilib:1.0.0+1.16.4"
-    include "io.engi.fabricmc:engilib:1.0.0+1.16.4"
+    modImplementation "io.engi.fabricmc:engilib:1.0.0+1.16"
+    include "io.engi.fabricmc:engilib:1.0.0+1.16"
 
-    modImplementation "io.engi.fabricmc:dynamo-api:1.0.0+1.16.4"
-    include "io.engi.fabricmc:dynamo-api:1.0.0+1.16.4"
+    modImplementation "io.engi.fabricmc:dynamo-api:1.0.0+1.16"
+    include "io.engi.fabricmc:dynamo-api:1.0.0+1.16"
 
-    modImplementation "io.github.cottonmc:LibGui:3.2.2+1.16.3"
-    include "io.github.cottonmc:LibGui:3.2.2+1.16.3"
+    modImplementation "io.github.cottonmc:LibGui:3.3.3+1.16.5"
+    include "io.github.cottonmc:LibGui:3.3.3+1.16.5"
 }
 
 processResources {
