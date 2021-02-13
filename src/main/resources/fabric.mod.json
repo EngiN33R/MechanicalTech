@@ -15,6 +15,9 @@
     ],
     "main":[
       "io.engi.mechanicaltech.MechanicalTech"
+    ],
+    "rei_plugins_v0": [
+      "io.engi.mechanicaltech.rei.REIEntryPoint"
     ]
   },
   "mixins":[],

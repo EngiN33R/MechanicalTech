@@ -18,6 +18,10 @@
   "block.mechanicaltech.cross_connector": "Cross Connector",
   "block.mechanicaltech.spindle": "Spindle",
 
+  "category.mechanicaltech.milling": "Milling",
+  "category.mechanicaltech.grinding": "Grinding",
+  "category.mechanicaltech.sawing": "Sawing",
+
   "item.mechanicaltech.turbine": "Turbine",
   "item.mechanicaltech.waterwheel": "Waterwheel",
   "item.mechanicaltech.windsail": "Windsail",
@@ -39,5 +43,7 @@
   "item.mechanicaltech.iron_grit": "Iron Grit",
   "item.mechanicaltech.gold_grit": "Gold Grit",
 
-  "itemGroup.mechanicaltech.items": "Mechanical Tech"
+  "itemGroup.mechanicaltech.items": "Mechanical Tech",
+
+  "gui.mechanicaltech.power": "%d MU"
 }

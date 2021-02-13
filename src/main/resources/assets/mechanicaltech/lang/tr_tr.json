@@ -2,7 +2,7 @@
   "block.mechanicaltech.turbine": "Türbin",
   "block.mechanicaltech.waterwheel": "Su çarkı",
   "block.mechanicaltech.windsail": "Yelkenli",
-  "block.mechanicaltech.manual_crank": "Manual çark",
+  "block.mechanicaltech.manual_crank": "Manuel çark",
 
   "block.mechanicaltech.battery_base": "Ana batarya",
   "block.mechanicaltech.battery_mid": "Batarya çekirdeği",
@@ -10,7 +10,7 @@
 
   "block.mechanicaltech.mill": "Değirmen",
   "block.mechanicaltech.grinder": "Öğütücü",
-  "block.mechanicaltech.sawmill": "Keresete fabrikası",
+  "block.mechanicaltech.sawmill": "Kereste fabrikası",
 
   "block.mechanicaltech.angled_connector_down": "Ayarlanmış birleştirici (Aşağı)",
   "block.mechanicaltech.angled_connector_right": "Ayarlanmış birleştirici (Yan)",
@@ -18,10 +18,14 @@
   "block.mechanicaltech.cross_connector": "Çapraz birleştirici",
   "block.mechanicaltech.spindle": "Dingil",
 
+  "category.mechanicaltech.milling": "Değirmencilik",
+  "category.mechanicaltech.grinding": "Öğütme",
+  "category.mechanicaltech.sawing": "Kereste fabrikası",
+
   "item.mechanicaltech.turbine": "Türbin",
   "item.mechanicaltech.waterwheel": "Su çarkı",
   "item.mechanicaltech.windsail": "Yelkenli",
-  "item.mechanicaltech.manual_crank": "Manual Crank",
+  "item.mechanicaltech.manual_crank": "Manuel çark",
 
   "item.mechanicaltech.mill": "Değirmen",
   "item.mechanicaltech.grinder": "Öğütücü",
@@ -39,5 +43,7 @@
   "item.mechanicaltech.iron_grit": "Demir kumtaşı",
   "item.mechanicaltech.gold_grit": "Altın kumtaşı",
 
-  "itemGroup.mechanicaltech.items": "Mekanik teknoloji"
+  "itemGroup.mechanicaltech.items": "Mekanik teknoloji",
+
+  "gui.mechanicaltech.power": "%d MB"
 }

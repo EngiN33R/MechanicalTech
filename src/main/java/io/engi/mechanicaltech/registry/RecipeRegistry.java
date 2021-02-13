@@ -11,12 +11,12 @@ public class RecipeRegistry {
 	public static RecipeType<SawingRecipe> SAWING;
 
 	public static void initialize() {
-		MILLING = RecipeType.register(MODID + ":milling");
-		GRINDING = RecipeType.register(MODID + ":grinding");
-		SAWING = RecipeType.register(MODID + ":sawing");
+		MILLING = RecipeType.register(Identifiers.RECIPE_MILLING.toString());
+		GRINDING = RecipeType.register(Identifiers.RECIPE_GRINDING.toString());
+		SAWING = RecipeType.register(Identifiers.RECIPE_SAWING.toString());
 
-		RecipeSerializer.register(MODID + ":milling", MillingRecipe.SERIALIZER);
-		RecipeSerializer.register(MODID + ":grinding", GrindingRecipe.SERIALIZER);
-		RecipeSerializer.register(MODID + ":sawing", SawingRecipe.SERIALIZER);
+		RecipeSerializer.register(Identifiers.RECIPE_MILLING.toString(), MillingRecipe.SERIALIZER);
+		RecipeSerializer.register(Identifiers.RECIPE_GRINDING.toString(), GrindingRecipe.SERIALIZER);
+		RecipeSerializer.register(Identifiers.RECIPE_SAWING.toString(), SawingRecipe.SERIALIZER);
 	}
 }

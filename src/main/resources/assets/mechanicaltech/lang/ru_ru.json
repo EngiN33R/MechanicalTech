@@ -18,6 +18,10 @@
   "block.mechanicaltech.cross_connector": "Перекрёстный соединитель",
   "block.mechanicaltech.spindle": "Шпиндель",
 
+  "category.mechanicaltech.milling": "Помол",
+  "category.mechanicaltech.grinding": "Дробление",
+  "category.mechanicaltech.sawing": "Пилка",
+
   "item.mechanicaltech.turbine": "Турбина",
   "item.mechanicaltech.waterwheel": "Водяное колесо",
   "item.mechanicaltech.windsail": "Ветряная мельница",
@@ -39,5 +43,7 @@
   "item.mechanicaltech.iron_grit": "Железный песок",
   "item.mechanicaltech.gold_grit": "Золотой песок",
 
-  "itemGroup.mechanicaltech.items": "Mechanical Tech"
+  "itemGroup.mechanicaltech.items": "Mechanical Tech",
+
+  "gui.mechanicaltech.power": "%d МЕ"
 }

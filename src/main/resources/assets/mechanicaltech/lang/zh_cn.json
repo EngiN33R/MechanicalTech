@@ -39,5 +39,7 @@
   "item.mechanicaltech.iron_grit": "铁砂",
   "item.mechanicaltech.gold_grit": "金砂",
 
-  "itemGroup.mechanicaltech.items": "机械科技"
+  "itemGroup.mechanicaltech.items": "机械科技",
+
+  "gui.mechanicaltech.power": "%d 机械能量"
 }
