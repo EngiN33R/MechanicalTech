@@ -47,8 +47,9 @@ public class WatermillBlockEntity extends AbstractTurbineAttachmentBlockEntity i
 		BlockState state = world.getBlockState(getPos());
 		Direction withFlow = state.get(HorizontalFacingBlock.FACING).rotateYCounterclockwise();
 		BlockState sideState = world.getBlockState(getPos().offset(withFlow));
+		BlockState oppositeState = world.getBlockState(getPos().offset(withFlow.getOpposite()));
 		double base = 0;
-		if (sideState.getFluidState().isIn(FluidTags.WATER) && !sideState.getFluidState().isStill()) {
+		if (sideState.getFluidState().isIn(FluidTags.WATER) && !oppositeState.getFluidState().isStill()) {
 			double velocity = sideState.getFluidState()
 												  .getVelocity(world, pos.offset(withFlow))
 												  .dotProduct(Vec3d.of(withFlow.getOpposite().getVector()));
