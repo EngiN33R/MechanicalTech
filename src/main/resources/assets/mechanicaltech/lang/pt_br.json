@@ -1,0 +1,49 @@
+{
+  "block.mechanicaltech.turbine": "Turbina",
+  "block.mechanicaltech.waterwheel": "Roda Dágua",
+  "block.mechanicaltech.windsail": "Moinho de Vento",
+  "block.mechanicaltech.manual_crank": "Manivela",
+
+  "block.mechanicaltech.battery_base": "Base da Bateria",
+  "block.mechanicaltech.battery_mid": "Núcleo da Bateria",
+  "block.mechanicaltech.battery_cap": "Tampa da Bateria",
+
+  "block.mechanicaltech.mill": "Moedor",
+  "block.mechanicaltech.grinder": "Triturador",
+  "block.mechanicaltech.sawmill": "Serraria",
+
+  "block.mechanicaltech.angled_connector_down": "Conector Angular (Baixo)",
+  "block.mechanicaltech.angled_connector_right": "Conector Angular (Lado)",
+  "block.mechanicaltech.angled_connector_up": "Conector Angular (Cima)",
+  "block.mechanicaltech.cross_connector": "Conector Cruzado",
+  "block.mechanicaltech.spindle": "Eixo",
+
+  "category.mechanicaltech.milling": "Moendo",
+  "category.mechanicaltech.grinding": "Triturando",
+  "category.mechanicaltech.sawing": "Serrando",
+
+  "item.mechanicaltech.turbine": "Turbina",
+  "item.mechanicaltech.waterwheel": "Roda Dágua",
+  "item.mechanicaltech.windsail": "Moinho de Vento",
+  "item.mechanicaltech.manual_crank": "Manivela",
+
+  "item.mechanicaltech.mill": "Moedor",
+  "item.mechanicaltech.grinder": "Triturador",
+  "item.mechanicaltech.sawmill": "Serraria",
+
+  "item.mechanicaltech.angled_connector_down": "Conector Angular (Baixo)",
+  "item.mechanicaltech.angled_connector_right": "Conector Angular (Lado)",
+  "item.mechanicaltech.angled_connector_up": "Conector Angular (Cima)",
+  "item.mechanicaltech.cross_connector": "Conector Cruzado",
+  "item.mechanicaltech.spindle": "Eixo",
+
+  "item.mechanicaltech.wood_gear": "Engrenagem de Madeira",
+  "item.mechanicaltech.flour": "Farinha",
+  "item.mechanicaltech.starch": "Amido",
+  "item.mechanicaltech.iron_grit": "Ferro Triturado",
+  "item.mechanicaltech.gold_grit": "Ouro Triturado",
+
+  "itemGroup.mechanicaltech.items": "Mechanical Tech",
+
+  "gui.mechanicaltech.power": "%d MU"
+}
